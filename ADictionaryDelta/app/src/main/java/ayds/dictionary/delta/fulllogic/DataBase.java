@@ -36,7 +36,7 @@ public class DataBase {
     concept.setTerm(term);
     concept.setMeaning(meaning);
     concept.setSource(1); //Crear enumerado setSource(Wikipedia)
-    db.termDao().insert(concept);
+    insertConcept(concept);
   }
 
   public static String getMeaning(String term) {
@@ -49,13 +49,17 @@ public class DataBase {
     return null;
   }
     
- private List<Concept> getConcepts(){
+ private static List<Concept> getConcepts(){
      return db.termDao().getAll();
  }
 
- private Concept findConceptByName(String term){
+ private static Concept findConceptByName(String term){
      return db.termDao().findByName(term);
      
  }
+    
+private static void insertConcept(Concept concept){
+    db.termDao().insert(concept);
+}
 
 }
