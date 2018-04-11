@@ -35,7 +35,7 @@ public class DataBase {
     Concept concept =  new Concept();
     concept.setTerm(term);
     concept.setMeaning(meaning);
-    concept.setSource(1);
+    concept.setSource(1); //Crear enumerado setSource(Wikipedia)
     db.termDao().insert(concept);
   }
 
