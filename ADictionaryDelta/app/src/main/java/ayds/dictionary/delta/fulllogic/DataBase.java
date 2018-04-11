@@ -19,7 +19,7 @@ public class DataBase {
 
   public static void testDB() {
 
-    List<Concept> concepts = db.termDao().getAll();
+    List<Concept> concepts = getConcepts();
 
     for (Concept concept :
         concepts) {
@@ -41,12 +41,21 @@ public class DataBase {
 
   public static String getMeaning(String term) {
 
-    Concept concept = db.termDao().findByName(term);
+    Concept concept = findConceptByName(String term);
 
     if (concept != null) {
       return concept.getMeaning();
     }
     return null;
   }
+    
+ private List<Concept> getConcepts(){
+     return db.termDao().getAll();
+ }
+
+ private Concept findConceptByName(String term){
+     return db.termDao().findByName(term);
+     
+ }
 
 }
