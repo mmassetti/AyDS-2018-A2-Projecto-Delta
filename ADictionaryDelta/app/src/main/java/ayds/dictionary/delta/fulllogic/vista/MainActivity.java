@@ -3,7 +3,6 @@ package ayds.dictionary.delta.fulllogic.vista;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,15 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         modeloConcepto.setListener(new ModeloConceptoListener() {
             @Override
-            public void didUpdateTerm(String meaning) {
-                /* Creo que aca deberia actualizar el panel con el significado obtenido del listener*/
-                /*   ----Porcion de codigo original----
-                final String textToSet = text;
+            public void didUpdateTerm(String meaning, String term) {
+                final String textToSet = textToHtml(meaning, term);;
                 textPane1.post(new Runnable() {
                     public void run() {
                         textPane1.setText(Html.fromHtml(textToSet));
                     }
-                });*/
+                });
             }
         });
 

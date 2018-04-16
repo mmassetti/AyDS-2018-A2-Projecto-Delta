@@ -29,16 +29,16 @@ public class ModuloModelo {
     }
 
     /* Es necesario usar el Thread?*/
-    private void iniciarBDD(Context context){
-            /*new Thread(new Runnable() {
+    private void iniciarBDD(final Context context){
+            new Thread(new Runnable() {
                 @Override
-                public void run() {*/
+                public void run() {
                     DataBase.createNewDatabase(context);
-                    /*DataBase.saveTerm("test", "sarasa");
+                    DataBase.saveTerm("test", "sarasa");
 
                     Log.e("**", "" + DataBase.getMeaning("test"));
                     Log.e("**", "" + DataBase.getMeaning("nada"));
                 }
-            }).start();*/
+            }).start();
     }
 }

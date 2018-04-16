@@ -12,20 +12,21 @@ public class ModeloConceptoImp implements ModeloConcepto {
          this.listener=listener;
      }
 
-     public void buscarTermino(String term){
-         repositorio.buscarTermino(term);
-         /* El metodo deberia pasarle el resultado al listener, para que MainActivity
-            lo obtenga directamente por parametro en el listener
-          */
-         notifyListener();
-     }
+     public void buscarTermino(final String term){
+             new Thread(new Runnable() {
+                 @Override
+                 public void run() {
+                     String meaning = repositorio.buscarTermino(term);
+                     notifyListener(meaning,term);
+                 }
+             }).start();
+    }
 
 
-     private void notifyListener(){     /*Una vez que lo obtuvo, en el listener aparece como parametro*/
-         String meaning=null;
-         if(listener!=null) {
-             listener.didUpdateTerm(meaning);
-         }
-     }
+    private void notifyListener(String meaning, String term){
+        if(listener!=null) {
+            listener.didUpdateTerm(meaning,term);
+        }
+    }
 
 }
