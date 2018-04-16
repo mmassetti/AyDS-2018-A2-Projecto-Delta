@@ -1,7 +1,7 @@
-#Mon Apr 16 08:33:42 ART 2018
-base.0=C\:\\Users\\Juanfri\\Documents\\UNS\\ArquitecturayDiseniodeSistemas\\A2-Proyecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+#Mon Apr 16 17:54:20 ART 2018
+base.0=C\:\\Users\\mmassetti\\Desktop\\ProyectoA2-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Juanfri\\Documents\\UNS\\ArquitecturayDiseniodeSistemas\\A2-Proyecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.1=C\:\\Users\\mmassetti\\Desktop\\ProyectoA2-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
