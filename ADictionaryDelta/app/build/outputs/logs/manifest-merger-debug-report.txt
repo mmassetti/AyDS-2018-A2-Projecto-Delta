@@ -53,10 +53,10 @@ ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proy
 		ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proyecto-Delta\ADictionaryDelta\app\src\main\AndroidManifest.xml:8:5-31
 	android:theme
 		ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proyecto-Delta\ADictionaryDelta\app\src\main\AndroidManifest.xml:13:5-36
-activity#ayds.dictionary.delta.fulllogic.MainActivity
+activity#ayds.dictionary.delta.fulllogic.vista.MainActivity
 ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proyecto-Delta\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:5-20:16
 	android:name
-		ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proyecto-Delta\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:15-53
+		ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proyecto-Delta\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:15-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\Juanfri\Documents\UNS\ArquitecturayDiseniodeSistemas\A2-Proyecto-Delta\ADictionaryDelta\app\src\main\AndroidManifest.xml:15:7-19:23
 action#android.intent.action.MAIN

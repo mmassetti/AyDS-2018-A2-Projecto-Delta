@@ -1,0 +1,4 @@
+#Mon Apr 16 08:33:41 ART 2018
+base.0=C\:\\Users\\Juanfri\\Documents\\UNS\\ArquitecturayDiseniodeSistemas\\A2-Proyecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex

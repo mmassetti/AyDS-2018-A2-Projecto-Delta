@@ -1,26 +1,26 @@
 package ayds.dictionary.delta.fulllogic.modelo;
 
-import android.content.Context;
-import android.util.Log;
-
-import ayds.dictionary.delta.fulllogic.modelo.bdd.room.DataBase;
-import ayds.dictionary.delta.fulllogic.modelo.servicios.ServicioApi;
-import ayds.dictionary.delta.fulllogic.modelo.servicios.ServicioApiImp;
+import ayds.dictionary.delta.fulllogic.modelo.bdd.BaseDatos;
+import ayds.dictionary.delta.fulllogic.modelo.bdd.BaseDatosImp;
+import ayds.dictionary.delta.fulllogic.modelo.servicios.Servicio;
+import ayds.dictionary.delta.fulllogic.modelo.servicios.ServicioImp;
+import ayds.dictionary.delta.fulllogic.vista.ModuloVista;
 
 public class ModuloModelo {
     private static ModuloModelo instance;
     private ModeloConcepto modeloConcepto;
 
-    private ModuloModelo(Context context){
-        iniciarBDD(context);
-        ServicioApi servicioApi = new ServicioApiImp();
-        Repositorio repositorio = new RepositorioImp(servicioApi);
+    private ModuloModelo(){
+        BaseDatos baseDatos = new BaseDatosImp(ModuloVista.getInstance().getContext());
+        HelperConversor helperConversor = new HelperConversorImp();
+        Servicio servicio = new ServicioImp(helperConversor);
+        Repositorio repositorio = new RepositorioImp(servicio, baseDatos);
         modeloConcepto = new ModeloConceptoImp(repositorio);
     }
 
-    public static ModuloModelo getInstance(Context context){
+    public static ModuloModelo getInstance(){
         if(instance==null)
-            instance = new ModuloModelo(context);
+            instance = new ModuloModelo();
         return instance;
     }
 
@@ -28,17 +28,6 @@ public class ModuloModelo {
         return modeloConcepto;
     }
 
-    /* Es necesario usar el Thread?*/
-    private void iniciarBDD(final Context context){
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    DataBase.createNewDatabase(context);
-                    DataBase.saveTerm("test", "sarasa");
 
-                    Log.e("**", "" + DataBase.getMeaning("test"));
-                    Log.e("**", "" + DataBase.getMeaning("nada"));
-                }
-            }).start();
-    }
+
 }
