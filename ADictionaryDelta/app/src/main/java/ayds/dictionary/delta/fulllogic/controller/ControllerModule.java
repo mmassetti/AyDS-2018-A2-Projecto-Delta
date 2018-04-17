@@ -1,6 +1,6 @@
 package ayds.dictionary.delta.fulllogic.controller;
 
-import ayds.dictionary.delta.fulllogic.modelo.ModelModule;
+import ayds.dictionary.delta.fulllogic.model.ModelModule;
 
 public class ControllerModule {
 
@@ -18,7 +18,7 @@ public class ControllerModule {
         return instance;
     }
 
-    public MeaningController getControlador() {
+    public MeaningController getController() {
         return meaningController;
     }
 

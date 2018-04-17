@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mmassetti\\Desktop\\ProyectoA2-Delta\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "C:\\Users\\Juanfri\\Documents\\UNS\\ArquitecturayDiseniodeSistemas\\A2-Proyecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\697906873f2bbfe5463f8b7eb37f36d9\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\Juanfri\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\afb369964ccc62026e9674e073644163\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

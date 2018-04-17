@@ -1,6 +1,6 @@
 package ayds.dictionary.delta.fulllogic.controller;
 
-import ayds.dictionary.delta.fulllogic.modelo.ConceptModel;
+import ayds.dictionary.delta.fulllogic.model.ConceptModel;
 
 public class MeaningControllerImp implements MeaningController {
     private ConceptModel conceptModel;
@@ -10,6 +10,6 @@ public class MeaningControllerImp implements MeaningController {
     }
 
     public void searchMeaning(String term) {
-        conceptModel.buscarTermino(term);
+        conceptModel.searchTerm(term);
     }
 }
