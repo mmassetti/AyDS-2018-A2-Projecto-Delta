@@ -2,10 +2,10 @@ package ayds.dictionary.delta.fulllogic.controller;
 
 import ayds.dictionary.delta.fulllogic.model.ConceptModel;
 
-public class MeaningControllerImp implements MeaningController {
+class MeaningControllerImp implements MeaningController {
     private ConceptModel conceptModel;
 
-    public MeaningControllerImp(ConceptModel conceptModel) {
+    MeaningControllerImp(ConceptModel conceptModel) {
         this.conceptModel = conceptModel;
     }
 

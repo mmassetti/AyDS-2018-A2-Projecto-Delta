@@ -11,6 +11,7 @@ import android.widget.TextView;
 import ayds.dictionary.delta.R;
 import ayds.dictionary.delta.fulllogic.controller.MeaningController;
 import ayds.dictionary.delta.fulllogic.controller.ControllerModule;
+import ayds.dictionary.delta.fulllogic.model.CheckConnectionListener;
 import ayds.dictionary.delta.fulllogic.model.ConceptModel;
 import ayds.dictionary.delta.fulllogic.model.ConceptModelListener;
 import ayds.dictionary.delta.fulllogic.model.ModelModule;
@@ -44,11 +45,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        conceptModel.setListener(new ConceptModelListener() {
+        conceptModel.setListenerConceptModel(new ConceptModelListener() {
             @Override
             public void didUpdateTerm(String meaning, String term) {
                 final String textToSet = transformMeaningAndTerm(meaning,term);
                 resultPane.post(new Runnable() {
+                    public void run() {
+                        setTextOnResultPane(textToSet);
+                    }
+                });
+            }
+        });
+
+        conceptModel.setListenerConnection(new CheckConnectionListener() {
+            @Override
+            public void didNotConnect() {
+                final String textToSet = "ERROR: NO CONNECTION";
+                resultPane.post(new Runnable() {
+                    @Override
                     public void run() {
                         setTextOnResultPane(textToSet);
                     }

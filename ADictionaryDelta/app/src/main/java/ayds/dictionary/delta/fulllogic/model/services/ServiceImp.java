@@ -5,6 +5,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 import java.io.IOException;
+import java.net.ConnectException;
 
 public class ServiceImp implements Service {
     WordsBighugelabsAPI wikiAPI;
@@ -23,7 +24,7 @@ public class ServiceImp implements Service {
        wikiAPI = retrofit.create(WordsBighugelabsAPI.class);
     }
 
-    public String getMeaning(String term) {
+    public String getMeaning(String term) throws Exception {
         String meaning=null;
         Response<String> callResponse;
         try {
@@ -34,9 +35,11 @@ public class ServiceImp implements Service {
             } else {
                 meaning = convertFinalString(meaning);
             }
+            //Cambiar el if, chequear si no es nulo
 
         } catch (IOException e1) {
             e1.printStackTrace();
+            throw new Exception("No connection");
         }
         return meaning;
     }

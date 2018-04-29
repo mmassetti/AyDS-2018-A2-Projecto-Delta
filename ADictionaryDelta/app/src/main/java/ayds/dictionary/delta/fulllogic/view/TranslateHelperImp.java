@@ -1,10 +1,7 @@
 package ayds.dictionary.delta.fulllogic.view;
 
-public class TranslateHelperImp implements TranslateHelper {
+class TranslateHelperImp implements TranslateHelper {
 
-    public TranslateHelperImp(){
-
-    }
 
     public String textToHTML(String text, String term) {
 

@@ -4,9 +4,9 @@ import android.content.Context;
 
 import ayds.dictionary.delta.fulllogic.model.database.room.DataBase;
 
-public class DataBaseHelperImp implements DataBaseHelper {
+class DataBaseHelperImp implements DataBaseHelper {
 
-    public DataBaseHelperImp(Context context) {
+    DataBaseHelperImp(Context context) {
         iniciarBDD(context);
     }
 

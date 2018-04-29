@@ -12,10 +12,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-public class ConversorHelperImp implements ConversorHelper {
-
-    public ConversorHelperImp() {
-    }
+class ConversorHelperImp implements ConversorHelper {
 
     public String convertString(String meaning) {
         try {

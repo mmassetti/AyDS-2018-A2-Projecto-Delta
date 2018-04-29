@@ -4,5 +4,7 @@ public interface ConceptModel {
 
     void searchTerm(String term);
 
-    void setListener(ConceptModelListener listener);
+    void setListenerConceptModel(ConceptModelListener listener);
+
+    void setListenerConnection(CheckConnectionListener listener);
 }
