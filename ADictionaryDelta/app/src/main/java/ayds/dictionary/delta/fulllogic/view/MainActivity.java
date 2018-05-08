@@ -11,27 +11,24 @@ import android.widget.TextView;
 import ayds.dictionary.delta.R;
 import ayds.dictionary.delta.fulllogic.controller.MeaningController;
 import ayds.dictionary.delta.fulllogic.controller.ControllerModule;
-import ayds.dictionary.delta.fulllogic.model.CheckConnectionListener;
 import ayds.dictionary.delta.fulllogic.model.ConceptModel;
-import ayds.dictionary.delta.fulllogic.model.ConceptModelListener;
+import ayds.dictionary.delta.fulllogic.model.listeners.ConceptModelListener;
+import ayds.dictionary.delta.fulllogic.model.listeners.ErrorListener;
 import ayds.dictionary.delta.fulllogic.model.ModelModule;
 
 
 public class MainActivity extends AppCompatActivity {
-
     private EditText wordField;
     private Button goButton;
     private TextView resultPane;
-
     private MeaningController meaningController;
     private ConceptModel conceptModel;
-    private TranslateHelper translateHelper = new TranslateHelperImp();
+    private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initializeAttributes();
-
         goButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 }).start();
             }
         });
-
-        conceptModel.setListenerConceptModel(new ConceptModelListener() {
+        conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
             public void didUpdateTerm(String meaning, String term) {
                 final String textToSet = transformMeaningAndTerm(meaning,term);
@@ -56,13 +52,11 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
-        conceptModel.setListenerConnection(new CheckConnectionListener() {
+        conceptModel.addErrorListener(new ErrorListener() {
             @Override
-            public void didNotConnect() {
-                final String textToSet = "ERROR: NO CONNECTION";
+            public void didErrorOcurr(String message) {
+                final String textToSet = message;
                 resultPane.post(new Runnable() {
-                    @Override
                     public void run() {
                         setTextOnResultPane(textToSet);
                     }
@@ -75,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         this.setApplicationContext();
         meaningController = getController();
         conceptModel = getConceptModel();
-
         setContentView(R.layout.activity_main);
         wordField = findViewById(R.id.wordField);
         goButton = findViewById(R.id.goButton);
@@ -107,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String transformMeaningAndTerm(String meaning, String term){
-        return translateHelper.textToHTML(meaning, term);
+        return textConverterHelper.textToHTML(meaning, term);
     }
-
-
 }

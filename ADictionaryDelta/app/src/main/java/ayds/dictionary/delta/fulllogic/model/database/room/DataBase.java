@@ -6,7 +6,6 @@ import android.content.Context;
 import java.util.List;
 
 public class DataBase {
-
     private static ConceptDataBase database;
 
     public static void createNewDatabase(Context context) {
@@ -41,5 +40,4 @@ public class DataBase {
     private static void insertConcept(Concept concept) {
         database.termDao().insert(concept);
     }
-
 }

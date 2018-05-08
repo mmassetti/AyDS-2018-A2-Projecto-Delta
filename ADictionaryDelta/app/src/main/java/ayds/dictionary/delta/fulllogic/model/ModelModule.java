@@ -10,7 +10,6 @@ public class ModelModule {
     private ConceptModel conceptModel;
 
     private ModelModule() {
-
         DataBaseHelper dataBaseHelper = ModuleDataBase.getInstance().getDataBaseHelper();
         ConversorHelper conversorHelper = new ConversorHelperImp();
         Service service = new ServiceImp(conversorHelper);
@@ -27,6 +26,4 @@ public class ModelModule {
     public ConceptModel getConceptModel() {
         return conceptModel;
     }
-
-
 }

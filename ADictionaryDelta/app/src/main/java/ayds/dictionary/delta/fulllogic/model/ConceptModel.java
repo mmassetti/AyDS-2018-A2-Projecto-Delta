@@ -1,10 +1,10 @@
 package ayds.dictionary.delta.fulllogic.model;
 
+import ayds.dictionary.delta.fulllogic.model.listeners.ConceptModelListener;
+import ayds.dictionary.delta.fulllogic.model.listeners.ErrorListener;
+
 public interface ConceptModel {
-
     void searchTerm(String term);
-
-    void setListenerConceptModel(ConceptModelListener listener);
-
-    void setListenerConnection(CheckConnectionListener listener);
+    void addConceptListener(ConceptModelListener listener);
+    void addErrorListener(ErrorListener listener);
 }

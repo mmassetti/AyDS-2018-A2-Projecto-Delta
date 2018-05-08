@@ -1,6 +1,5 @@
 package ayds.dictionary.delta.fulllogic.view;
 
-public interface TranslateHelper {
-
+public interface TextConverterHelper {
     String textToHTML(String text, String term);
 }

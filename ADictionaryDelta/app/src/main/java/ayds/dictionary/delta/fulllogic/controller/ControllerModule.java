@@ -3,7 +3,6 @@ package ayds.dictionary.delta.fulllogic.controller;
 import ayds.dictionary.delta.fulllogic.model.ModelModule;
 
 public class ControllerModule {
-
     private static ControllerModule instance;
     private MeaningController meaningController;
 
@@ -21,5 +20,4 @@ public class ControllerModule {
     public MeaningController getController() {
         return meaningController;
     }
-
 }

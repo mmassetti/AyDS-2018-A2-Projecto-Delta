@@ -7,10 +7,10 @@ import ayds.dictionary.delta.fulllogic.model.database.room.DataBase;
 class DataBaseHelperImp implements DataBaseHelper {
 
     DataBaseHelperImp(Context context) {
-        iniciarBDD(context);
+        initDataBase(context);
     }
 
-    private void iniciarBDD(final Context context) {
+    private void initDataBase(final Context context) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -24,6 +24,6 @@ class DataBaseHelperImp implements DataBaseHelper {
     }
 
     public void saveTerm(String meaning, String term) {
-        DataBase.saveTerm(meaning, term);
+        DataBase.saveTerm(term,meaning);
     }
 }

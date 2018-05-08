@@ -16,37 +16,27 @@ class ConversorHelperImp implements ConversorHelper {
 
     public String convertString(String meaning) {
         try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new InputSource(new java.io.StringReader(meaning)));
-
-            NodeList nodes = doc.getDocumentElement().getElementsByTagName("w");
-
+            NodeList nodes= createNode(meaning);
             StringBuilder extract = new StringBuilder();
             extract.append("<b>Nouns:</b><br>");
-
             boolean startVerbs = false;
 
             for (int i = 0; i < nodes.getLength(); i++) {
                 Node node = nodes.item(i);
 
-                String p = node.getAttributes().getNamedItem("p").getTextContent();
-                String r = node.getAttributes().getNamedItem("r").getTextContent();
+                String p = formatToString("p",node);
+                String r = formatToString("r",node);
 
                 if (r.equals("syn")) {
                     extract.append(node.getTextContent()).append(", ");
                 }
-
                 if (!startVerbs && p.equals("verb")) {
                     extract.append("<br><br>");
                     extract.append("<b>Verbs:</b><br>");
                     startVerbs = true;
                 }
-
             }
-
-            meaning = extract.toString().replace("\\n", "<br>");
-
+            meaning = replaceString(extract);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -55,5 +45,19 @@ class ConversorHelperImp implements ConversorHelper {
             e.printStackTrace();
         }
         return meaning;
+    }
+
+    private NodeList createNode(String meaning) throws ParserConfigurationException, IOException,SAXException{
+        DocumentBuilder db =  DocumentBuilderFactory.newInstance().newDocumentBuilder();
+        Document doc = db.parse(new InputSource(new java.io.StringReader(meaning)));
+        return doc.getDocumentElement().getElementsByTagName("w");
+    }
+
+    private String formatToString(String name, Node node){
+        return node.getAttributes().getNamedItem(name).getTextContent();
+    }
+
+    private String replaceString(StringBuilder extract){
+        return extract.toString().replace("\\n", "<br>");
     }
 }
