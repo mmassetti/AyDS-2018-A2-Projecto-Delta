@@ -19,7 +19,7 @@ class ExceptionHandlerImp implements ExceptionHandler {
 
     private void notifyListener(String exceptionMessage){
         if(errorListener!=null)
-            errorListener.didErrorOcurr(exceptionMessage);
+            errorListener.didErrorOccur(exceptionMessage);
     }
 
     public void setListener(ErrorListener errorListener){

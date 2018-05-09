@@ -1,11 +1,13 @@
 package ayds.dictionary.delta.view;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import ayds.dictionary.delta.R;
@@ -16,14 +18,15 @@ import ayds.dictionary.delta.model.listeners.ConceptModelListener;
 import ayds.dictionary.delta.model.listeners.ErrorListener;
 import ayds.dictionary.delta.model.ModelModule;
 
-
 public class MainActivity extends AppCompatActivity {
     private EditText wordField;
     private Button goButton;
+    private ProgressBar progressBar;
     private TextView resultPane;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
     private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
+    private Handler progressBarHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        showProgressBar();
                         String term = getTextFromWordField();
                         searchMeaningOfTheTerm(term);
                     }
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addErrorListener(new ErrorListener() {
             @Override
-            public void didErrorOcurr(String message) {
+            public void didErrorOccur(String message) {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
@@ -65,6 +69,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void showProgressBar() {
+        progressBarHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.VISIBLE);
+            }
+        });
+    }
     private void initializeAttributes() {
         this.setApplicationContext();
         meaningController = getController();
@@ -72,7 +84,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         wordField = findViewById(R.id.wordField);
         goButton = findViewById(R.id.goButton);
+        progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
+        progressBarHandler= new Handler();
     }
 
     private void setApplicationContext(){
@@ -93,6 +107,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void setTextOnResultPane(String textToSet){
         resultPane.setText(Html.fromHtml(textToSet));
+        removeProgressBar();
+
+    }
+
+    private void removeProgressBar() {
+        progressBarHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.GONE);
+            }
+        });
     }
 
     private void searchMeaningOfTheTerm(String term){

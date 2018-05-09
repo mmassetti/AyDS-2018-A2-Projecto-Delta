@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Wed May 09 10:44:49 ART 2018
-1.base=C\:\\Users\\agusu\\Desktop\\ProyectoArquiPosta\\AyDS-2018-A2-Projecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+#Wed May 09 12:30:26 ART 2018
+1.base=C\:\\Users\\agusu\\Desktop\\Entrega2\\AyDS-2018-A2-Projecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=C\:\\Users\\agusu\\Desktop\\ProyectoArquiPosta\\AyDS-2018-A2-Projecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+0.base=C\:\\Users\\agusu\\Desktop\\Entrega2\\AyDS-2018-A2-Projecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 1.path=classes.dex
