@@ -1,4 +1,4 @@
-package ayds.dictionary.delta.model.services;
+package services;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

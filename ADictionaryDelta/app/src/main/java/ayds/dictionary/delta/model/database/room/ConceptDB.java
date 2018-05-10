@@ -4,7 +4,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity
-public class Concept {
+public class ConceptDB {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String term;

@@ -1,4 +1,4 @@
-package ayds.dictionary.delta.model.services;
+package services;
 
 public interface Service {
     void connect();

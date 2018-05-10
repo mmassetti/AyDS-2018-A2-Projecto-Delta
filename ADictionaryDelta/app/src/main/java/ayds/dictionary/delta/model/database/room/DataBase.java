@@ -1,8 +1,8 @@
 package ayds.dictionary.delta.model.database.room;
 
-import android.arch.persistence.room.Room;
-import android.content.Context;
 
+import android.content.Context;
+import android.arch.persistence.room.Room;
 import java.util.List;
 
 public class DataBase {
@@ -13,7 +13,7 @@ public class DataBase {
     }
 
     public static void saveTerm(String term, String meaning) {
-        Concept concept = new Concept();
+        ConceptDB concept = new ConceptDB();
         concept.setTerm(term);
         concept.setMeaning(meaning);
         concept.setSource(1);
@@ -21,23 +21,23 @@ public class DataBase {
     }
 
     public static String getMeaning(String term) {
-        Concept concept = findConceptByName(term);
+        ConceptDB concept = findConceptByName(term);
         if (concept != null) {
             return concept.getMeaning();
         }
         return null;
     }
 
-    private static List<Concept> getConcepts() {
+    private static List<ConceptDB> getConcepts() {
         return database.termDao().getAll();
     }
 
-    private static Concept findConceptByName(String term) {
+    private static ConceptDB findConceptByName(String term) {
         return database.termDao().findByName(term);
 
     }
 
-    private static void insertConcept(Concept concept) {
+    private static void insertConcept(ConceptDB concept) {
         database.termDao().insert(concept);
     }
 }

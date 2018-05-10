@@ -2,6 +2,7 @@ package ayds.dictionary.delta.model.database;
 
 import android.content.Context;
 
+import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.database.room.DataBase;
 
 class DataBaseHelperImp implements DataBaseHelper {
@@ -19,11 +20,13 @@ class DataBaseHelperImp implements DataBaseHelper {
         }).start();
     }
 
-    public String getMeaning(String term) {
-        return DataBase.getMeaning(term);
+    public String getConceptMeaning(Concept concept) {
+        return DataBase.getMeaning(concept.getConcept());
     }
 
-    public void saveTerm(String meaning, String term) {
-        DataBase.saveTerm(term,meaning);
+    public void saveConcept(Concept concept) {
+        String meaning = concept.getMeaning();
+        String term = concept.getConcept();
+        DataBase.saveTerm(term, meaning);
     }
 }

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ADictionaryDelta.iml" filepath="$PROJECT_DIR$/ADictionaryDelta.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wikipediaLib/wikipediaLib.iml" filepath="$PROJECT_DIR$/wikipediaLib/wikipediaLib.iml" />
     </modules>
   </component>
 </project>
