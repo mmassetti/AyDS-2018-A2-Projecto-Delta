@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\agusu\\Desktop\\Entrega2\\AyDS-2018-A2-Projecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw\\values-sw.xml",
+            "outputFile": "C:\\Users\\mmassetti\\Desktop\\Entrega2\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw\\values-sw.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\agusu\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\c761c9267b596d57532747e9820aaeae\\res\\values-sw\\values-sw.xml",
+                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\9efd7a68c15128a1bae7bcddbb77882a\\res\\values-sw\\values-sw.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\agusu\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a946cac72ea3834ec7425cb91ab0bd8c\\res\\values-sw\\values-sw.xml",
+                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\697906873f2bbfe5463f8b7eb37f36d9\\res\\values-sw\\values-sw.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

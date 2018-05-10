@@ -11,12 +11,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import ayds.dictionary.delta.R;
-import ayds.dictionary.delta.controller.MeaningController;
 import ayds.dictionary.delta.controller.ControllerModule;
+import ayds.dictionary.delta.controller.MeaningController;
 import ayds.dictionary.delta.model.ConceptModel;
+import ayds.dictionary.delta.model.ModelModule;
 import ayds.dictionary.delta.model.listeners.ConceptModelListener;
 import ayds.dictionary.delta.model.listeners.ErrorListener;
-import ayds.dictionary.delta.model.ModelModule;
 
 public class MainActivity extends AppCompatActivity {
     private EditText wordField;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private MeaningController meaningController;
     private ConceptModel conceptModel;
     private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
+    private ErrorMessageHelper errorMessageHelper = new ErrorMessageHelperImp();
     private Handler progressBarHandler;
 
     @Override
@@ -62,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
-                        setTextOnResultPane(textToSet);
+                        setTextOnResultPane("");
+                        errorMessageHelper.showPopUpMessage(textToSet,MainActivity.this);
+                        removeProgressBar();
                     }
                 });
             }
@@ -108,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
     private void setTextOnResultPane(String textToSet){
         resultPane.setText(Html.fromHtml(textToSet));
         removeProgressBar();
-
     }
 
     private void removeProgressBar() {
@@ -127,4 +129,5 @@ public class MainActivity extends AppCompatActivity {
     private String transformMeaningAndTerm(String meaning, String term){
         return textConverterHelper.textToHTML(meaning, term);
     }
+
 }
