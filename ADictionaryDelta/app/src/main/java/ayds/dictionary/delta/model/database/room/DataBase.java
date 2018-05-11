@@ -1,8 +1,9 @@
 package ayds.dictionary.delta.model.database.room;
 
 
-import android.content.Context;
 import android.arch.persistence.room.Room;
+import android.content.Context;
+
 import java.util.List;
 
 public class DataBase {
