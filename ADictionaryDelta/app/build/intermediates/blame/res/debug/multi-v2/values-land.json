@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Juanfri\\Desktop\\A2-Proyecto-Delta-Entrega2\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\agusu\\Desktop\\Entrega2\\AyDS-2018-A2-Projecto-Delta\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Juanfri\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\444cb297d1656408ae8f577abca26f13\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\agusu\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\6b6135192e93733aa4089a8654dc4572\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

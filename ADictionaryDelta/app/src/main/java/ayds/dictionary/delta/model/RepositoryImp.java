@@ -47,7 +47,6 @@ class RepositoryImp implements Repository {
         return myConcept;
     }
 
-
     private Concept createConcept(String term) {
         Concept concept = new Concept();
         concept.setTerm(term);

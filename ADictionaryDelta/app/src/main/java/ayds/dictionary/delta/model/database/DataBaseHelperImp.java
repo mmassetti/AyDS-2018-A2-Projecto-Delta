@@ -1,7 +1,6 @@
 package ayds.dictionary.delta.model.database;
 
 import android.content.Context;
-
 import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.database.room.DataBase;
 

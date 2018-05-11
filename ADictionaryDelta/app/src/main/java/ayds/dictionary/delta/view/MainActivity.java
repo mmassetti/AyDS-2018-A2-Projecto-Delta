@@ -134,5 +134,4 @@ public class MainActivity extends AppCompatActivity {
     private String transformMeaningAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
     }
-
 }

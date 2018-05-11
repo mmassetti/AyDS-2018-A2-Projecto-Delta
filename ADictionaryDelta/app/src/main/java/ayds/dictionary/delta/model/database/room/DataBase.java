@@ -3,7 +3,6 @@ package ayds.dictionary.delta.model.database.room;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
-
 import java.util.List;
 
 public class DataBase {
@@ -35,7 +34,6 @@ public class DataBase {
 
     private static ConceptDB findConceptByName(String term) {
         return database.termDao().findByName(term);
-
     }
 
     private static void insertConcept(ConceptDB concept) {

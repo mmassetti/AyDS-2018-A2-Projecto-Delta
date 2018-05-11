@@ -28,5 +28,4 @@ public class Concept {
     public void setSource(Source source) {
         this.source = source;
     }
-
 }
