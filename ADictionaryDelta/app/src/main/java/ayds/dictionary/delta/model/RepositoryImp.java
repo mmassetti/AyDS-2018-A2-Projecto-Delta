@@ -72,7 +72,7 @@ class RepositoryImp implements Repository {
     }
 
     private boolean isWellFormedTermFormat(String term) {
-        char termLetter = ' ';
+        char termLetter;
         boolean wellFormedTerm = true;
         for (int i = 0; i < term.length() && wellFormedTerm; i++) {
             termLetter = term.charAt(i);

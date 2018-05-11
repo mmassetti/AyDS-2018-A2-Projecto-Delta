@@ -6,7 +6,7 @@ import retrofit2.http.Path;
 
 public interface WordsBighugelabsAPI {
 
-  @GET("ba10a6bc725bde1d3b3dfc78f9b92ab1/{word}/xml")
-  Call<String> getTerm(@Path("word") String word);
+    @GET("206df5b830b0688a637f1bda5b49f4ac/{word}/xml")
+    Call<String> getTerm(@Path("word") String word);
 
 }

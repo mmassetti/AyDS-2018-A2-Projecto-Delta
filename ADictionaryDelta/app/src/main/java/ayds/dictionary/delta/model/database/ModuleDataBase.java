@@ -10,14 +10,14 @@ public class ModuleDataBase {
 
     private ModuleDataBase() {
         Context context = ViewModule.getInstance().getContext();
-        dataBaseHelper= new DataBaseHelperImp(context);
+        dataBaseHelper = new DataBaseHelperImp(context);
     }
 
     public static ModuleDataBase getInstance() {
         if (instance == null) {
-            instance= new ModuleDataBase();
+            instance = new ModuleDataBase();
         }
-        return  instance;
+        return instance;
     }
 
     public DataBaseHelper getDataBaseHelper() {

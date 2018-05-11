@@ -5,7 +5,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ServiceImp implements Service {
-    WordsBighugelabsAPI wikiAPI;
+    private WordsBighugelabsAPI wikiAPI;
 
     public ServiceImp() {
         connect();

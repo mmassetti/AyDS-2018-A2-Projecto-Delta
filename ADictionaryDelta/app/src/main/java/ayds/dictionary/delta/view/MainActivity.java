@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
             public void didUpdateTerm(String meaning, String term) {
-                final String textToSet = transformMeaningAndTerm(meaning,term);
+                final String textToSet = transformMeaningAndTerm(meaning, term);
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane(textToSet);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane("");
-                        errorMessageHelper.showPopUpMessage(textToSet,MainActivity.this);
+                        errorMessageHelper.showPopUpMessage(textToSet, MainActivity.this);
                         removeProgressBar();
                     }
                 });
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void initializeAttributes() {
         this.setApplicationContext();
         meaningController = getController();
@@ -89,26 +90,26 @@ public class MainActivity extends AppCompatActivity {
         goButton = findViewById(R.id.goButton);
         progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
-        progressBarHandler= new Handler();
+        progressBarHandler = new Handler();
     }
 
-    private void setApplicationContext(){
+    private void setApplicationContext() {
         ViewModule.getInstance().setContext(getApplicationContext());
     }
 
-    private MeaningController getController(){
+    private MeaningController getController() {
         return ControllerModule.getInstance().getController();
     }
 
-    private ConceptModel getConceptModel(){
+    private ConceptModel getConceptModel() {
         return ModelModule.getInstance().getConceptModel();
     }
 
-    private String getTextFromWordField(){
+    private String getTextFromWordField() {
         return wordField.getText().toString();
     }
 
-    private void setTextOnResultPane(String textToSet){
+    private void setTextOnResultPane(String textToSet) {
         resultPane.setText(Html.fromHtml(textToSet));
         removeProgressBar();
     }
@@ -122,11 +123,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void searchMeaningOfTheTerm(String term){
+    private void searchMeaningOfTheTerm(String term) {
         meaningController.searchMeaning(term);
     }
 
-    private String transformMeaningAndTerm(String meaning, String term){
+    private String transformMeaningAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
     }
 
