@@ -1,5 +1,7 @@
 package ayds.dictionary.delta.model.listeners;
 
+import ayds.dictionary.delta.model.Concept;
+
 public interface ConceptModelListener {
-    void didUpdateTerm(String meaning, String term);
+    void didUpdateTerm(Concept concept);
 }

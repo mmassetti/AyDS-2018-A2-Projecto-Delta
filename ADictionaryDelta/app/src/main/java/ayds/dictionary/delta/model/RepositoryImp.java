@@ -23,8 +23,8 @@ class RepositoryImp implements Repository {
         this.conversorHelper = conversorHelper;
     }
 
-    public String searchTerm(String term) {
-        String meaning = null;
+    public Concept searchTerm(String term) {
+        String meaning;
         Concept myConcept = createConcept(term);
         try {
             checkFormat(term);
@@ -32,6 +32,7 @@ class RepositoryImp implements Repository {
             final String prefixExistsInDb = "[*]";
             if (meaning != null) { // exists in db
                 meaning = prefixExistsInDb + meaning;
+                myConcept.setMeaning(meaning);
             } else {
                 meaning = searchTermOnService(term);
                 if (!isBadResult(meaning)) {
@@ -39,17 +40,17 @@ class RepositoryImp implements Repository {
                     myConcept.setMeaning(meaning);
                     dataBaseHelper.saveConcept(myConcept);
                 }
-
             }
         } catch (Exception e) {
             handler.handleException(e);
         }
-        return meaning;
+        return myConcept;
     }
+
 
     private Concept createConcept(String term) {
         Concept concept = new Concept();
-        concept.setConcept(term);
+        concept.setTerm(term);
         concept.setSource(Source.WIKIPEDIA);
         return concept;
     }

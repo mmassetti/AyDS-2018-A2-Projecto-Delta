@@ -13,6 +13,7 @@ import android.widget.TextView;
 import ayds.dictionary.delta.R;
 import ayds.dictionary.delta.controller.ControllerModule;
 import ayds.dictionary.delta.controller.MeaningController;
+import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.ConceptModel;
 import ayds.dictionary.delta.model.ModelModule;
 import ayds.dictionary.delta.model.listeners.ConceptModelListener;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText wordField;
     private Button goButton;
     private ProgressBar progressBar;
-    private TextView resultPane;
+    private TextView resultPane,sourceLabel;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
     private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
@@ -48,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
-            public void didUpdateTerm(String meaning, String term) {
-                final String textToSet = transformMeaningAndTerm(meaning, term);
+            public void didUpdateTerm(final Concept concept) {
+                final String textToSet = transformMeaningAndTerm(concept.getMeaning(),concept.getTerm());
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane(textToSet);
+                        String source = concept.getSource().toString();
+                        sourceLabel.setText(getString(R.string.source,source));
                     }
                 });
             }
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
         progressBarHandler = new Handler();
+        sourceLabel = findViewById(R.id.sourceLabel);
     }
 
     private void setApplicationContext() {

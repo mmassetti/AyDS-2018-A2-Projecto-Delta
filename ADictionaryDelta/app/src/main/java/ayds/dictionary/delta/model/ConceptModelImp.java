@@ -24,20 +24,20 @@ class ConceptModelImp implements ConceptModel {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String meaning = searchTermOnRepository(term);
-                if (meaning != null)
-                    notifyListenerConceptModel(meaning, term);
+                Concept concept = searchTermOnRepository(term);
+                if (concept.getMeaning() != null)
+                    notifyListenerConceptModel(concept);
             }
         }).start();
     }
 
-    private void notifyListenerConceptModel(String meaning, String term) {
+    private void notifyListenerConceptModel(Concept concept) {
         if (conceptListener != null) {
-            conceptListener.didUpdateTerm(meaning, term);
+            conceptListener.didUpdateTerm(concept);
         }
     }
 
-    private String searchTermOnRepository(String term) {
+    private Concept searchTermOnRepository(String term) {
         return repository.searchTerm(term);
     }
 

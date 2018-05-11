@@ -1,12 +1,12 @@
 package ayds.dictionary.delta.model;
 
 public class Concept {
-    private String concept;
+    private String term;
     private String meaning;
     private Source source;
 
-    public String getConcept() {
-        return concept;
+    public String getTerm() {
+        return term;
     }
 
     public String getMeaning() {
@@ -17,8 +17,8 @@ public class Concept {
         return source;
     }
 
-    public void setConcept(String concept) {
-        this.concept = concept;
+    public void setTerm(String concept) {
+        this.term = concept;
     }
 
     public void setMeaning(String meaning) {

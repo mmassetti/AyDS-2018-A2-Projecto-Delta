@@ -21,12 +21,12 @@ class DataBaseHelperImp implements DataBaseHelper {
     }
 
     public String getConceptMeaning(Concept concept) {
-        return DataBase.getMeaning(concept.getConcept());
+        return DataBase.getMeaning(concept.getTerm());
     }
 
     public void saveConcept(Concept concept) {
         String meaning = concept.getMeaning();
-        String term = concept.getConcept();
+        String term = concept.getTerm();
         DataBase.saveTerm(term, meaning);
     }
 }
