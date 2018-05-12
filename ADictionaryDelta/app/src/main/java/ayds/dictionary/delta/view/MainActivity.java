@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText wordField;
     private Button goButton;
     private ProgressBar progressBar;
-    private TextView resultPane,sourceLabel;
+    private TextView resultPane, sourceLabel;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
     private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
             public void didUpdateTerm(final Concept concept) {
-                final String textToSet = transformMeaningAndTerm(concept.getMeaning(),concept.getTerm());
+                final String textToSet = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm());
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane(textToSet);
                         String source = concept.getSource().toString();
-                        sourceLabel.setText(getString(R.string.source,source));
+                        sourceLabel.setText(getString(R.string.source, source));
                     }
                 });
             }
