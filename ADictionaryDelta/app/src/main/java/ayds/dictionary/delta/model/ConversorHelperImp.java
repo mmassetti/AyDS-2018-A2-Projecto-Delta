@@ -16,7 +16,7 @@ class ConversorHelperImp implements ConversorHelper {
 
     public String convertString(String meaning) {
         try {
-            NodeList nodes= createNode(meaning);
+            NodeList nodes = createNode(meaning);
             StringBuilder extract = new StringBuilder();
             extract.append("<b>Nouns:</b><br>");
             boolean startVerbs = false;
@@ -24,8 +24,8 @@ class ConversorHelperImp implements ConversorHelper {
             for (int i = 0; i < nodes.getLength(); i++) {
                 Node node = nodes.item(i);
 
-                String p = formatToString("p",node);
-                String r = formatToString("r",node);
+                String p = formatToString("p", node);
+                String r = formatToString("r", node);
 
                 if (r.equals("syn")) {
                     extract.append(node.getTextContent()).append(", ");
@@ -47,17 +47,17 @@ class ConversorHelperImp implements ConversorHelper {
         return meaning;
     }
 
-    private NodeList createNode(String meaning) throws ParserConfigurationException, IOException,SAXException{
-        DocumentBuilder db =  DocumentBuilderFactory.newInstance().newDocumentBuilder();
+    private NodeList createNode(String meaning) throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
         Document doc = db.parse(new InputSource(new java.io.StringReader(meaning)));
         return doc.getDocumentElement().getElementsByTagName("w");
     }
 
-    private String formatToString(String name, Node node){
+    private String formatToString(String name, Node node) {
         return node.getAttributes().getNamedItem(name).getTextContent();
     }
 
-    private String replaceString(StringBuilder extract){
+    private String replaceString(StringBuilder extract) {
         return extract.toString().replace("\\n", "<br>");
     }
 }

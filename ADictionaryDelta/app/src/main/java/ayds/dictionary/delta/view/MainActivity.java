@@ -1,29 +1,34 @@
 package ayds.dictionary.delta.view;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import ayds.dictionary.delta.R;
-import ayds.dictionary.delta.controller.MeaningController;
 import ayds.dictionary.delta.controller.ControllerModule;
+import ayds.dictionary.delta.controller.MeaningController;
+import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.ConceptModel;
+import ayds.dictionary.delta.model.ModelModule;
 import ayds.dictionary.delta.model.listeners.ConceptModelListener;
 import ayds.dictionary.delta.model.listeners.ErrorListener;
-import ayds.dictionary.delta.model.ModelModule;
-
 
 public class MainActivity extends AppCompatActivity {
     private EditText wordField;
     private Button goButton;
-    private TextView resultPane;
+    private ProgressBar progressBar;
+    private TextView resultPane, sourceLabel;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
     private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
+    private ErrorMessageHelper errorMessageHelper = new ErrorMessageHelperImp();
+    private Handler progressBarHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        showProgressBar();
                         String term = getTextFromWordField();
                         searchMeaningOfTheTerm(term);
                     }
@@ -43,24 +49,37 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
-            public void didUpdateTerm(String meaning, String term) {
-                final String textToSet = transformMeaningAndTerm(meaning,term);
+            public void didUpdateTerm(final Concept concept) {
+                final String textToSet = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm());
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane(textToSet);
+                        String source = concept.getSource().toString();
+                        sourceLabel.setText(getString(R.string.source, source));
                     }
                 });
             }
         });
         conceptModel.addErrorListener(new ErrorListener() {
             @Override
-            public void didErrorOcurr(String message) {
+            public void didErrorOccur(String message) {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
-                        setTextOnResultPane(textToSet);
+                        setTextOnResultPane("");
+                        errorMessageHelper.showPopUpMessage(textToSet, MainActivity.this);
+                        removeProgressBar();
                     }
                 });
+            }
+        });
+    }
+
+    private void showProgressBar() {
+        progressBarHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -72,34 +91,47 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         wordField = findViewById(R.id.wordField);
         goButton = findViewById(R.id.goButton);
+        progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
+        progressBarHandler = new Handler();
+        sourceLabel = findViewById(R.id.sourceLabel);
     }
 
-    private void setApplicationContext(){
+    private void setApplicationContext() {
         ViewModule.getInstance().setContext(getApplicationContext());
     }
 
-    private MeaningController getController(){
+    private MeaningController getController() {
         return ControllerModule.getInstance().getController();
     }
 
-    private ConceptModel getConceptModel(){
+    private ConceptModel getConceptModel() {
         return ModelModule.getInstance().getConceptModel();
     }
 
-    private String getTextFromWordField(){
+    private String getTextFromWordField() {
         return wordField.getText().toString();
     }
 
-    private void setTextOnResultPane(String textToSet){
+    private void setTextOnResultPane(String textToSet) {
         resultPane.setText(Html.fromHtml(textToSet));
+        removeProgressBar();
     }
 
-    private void searchMeaningOfTheTerm(String term){
+    private void removeProgressBar() {
+        progressBarHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.GONE);
+            }
+        });
+    }
+
+    private void searchMeaningOfTheTerm(String term) {
         meaningController.searchMeaning(term);
     }
 
-    private String transformMeaningAndTerm(String meaning, String term){
+    private String transformMeaningAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
     }
 }

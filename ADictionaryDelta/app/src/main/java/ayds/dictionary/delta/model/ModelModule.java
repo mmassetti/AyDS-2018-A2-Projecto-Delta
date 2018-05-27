@@ -2,8 +2,8 @@ package ayds.dictionary.delta.model;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
 import ayds.dictionary.delta.model.database.ModuleDataBase;
-import ayds.dictionary.delta.model.services.Service;
-import ayds.dictionary.delta.model.services.ServiceImp;
+import services.Service;
+import services.ServiceImp;
 
 public class ModelModule {
     private static ModelModule instance;
@@ -12,8 +12,8 @@ public class ModelModule {
     private ModelModule() {
         DataBaseHelper dataBaseHelper = ModuleDataBase.getInstance().getDataBaseHelper();
         ConversorHelper conversorHelper = new ConversorHelperImp();
-        Service service = new ServiceImp(conversorHelper);
-        Repository repository = new RepositoryImp(service, dataBaseHelper);
+        Service service = new ServiceImp();
+        Repository repository = new RepositoryImp(service, dataBaseHelper, conversorHelper);
         conceptModel = new ConceptModelImp(repository);
     }
 

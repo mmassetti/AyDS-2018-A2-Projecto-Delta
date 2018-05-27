@@ -1,7 +1,6 @@
 package ayds.dictionary.delta.model.database;
 
 import android.content.Context;
-
 import ayds.dictionary.delta.view.ViewModule;
 
 public class ModuleDataBase {
@@ -10,14 +9,14 @@ public class ModuleDataBase {
 
     private ModuleDataBase() {
         Context context = ViewModule.getInstance().getContext();
-        dataBaseHelper= new DataBaseHelperImp(context);
+        dataBaseHelper = new DataBaseHelperImp(context);
     }
 
     public static ModuleDataBase getInstance() {
         if (instance == null) {
-            instance= new ModuleDataBase();
+            instance = new ModuleDataBase();
         }
-        return  instance;
+        return instance;
     }
 
     public DataBaseHelper getDataBaseHelper() {
