@@ -1,0 +1,3 @@
+[submodule "ADictionaryDelta/bhlLIB"]
+	path = ADictionaryDelta/bhlLIB
+	url = https://github.com/juanfmoyano/bhlLIB.git
