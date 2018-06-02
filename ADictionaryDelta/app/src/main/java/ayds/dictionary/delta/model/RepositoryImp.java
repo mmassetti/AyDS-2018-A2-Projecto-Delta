@@ -5,7 +5,6 @@ import java.io.IOException;
 import ayds.dictionary.delta.model.database.DataBaseHelper;
 import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
-import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
 import services.Service;
 
 class RepositoryImp implements Repository {
@@ -15,10 +14,10 @@ class RepositoryImp implements Repository {
     private ConversorHelper conversorHelper;
     private FormatChecker formatChecker = new FormatCheckerImp();
 
-    RepositoryImp(Service service, DataBaseHelper dataBaseHelper, ConversorHelper conversorHelper) {
+    RepositoryImp(Service service, DataBaseHelper dataBaseHelper, ConversorHelper conversorHelper, ExceptionHandler handler) {
         this.service = service;
         this.dataBaseHelper = dataBaseHelper;
-        this.handler = ModuleExceptions.getInstance().getHandler();
+        this.handler = handler;
         this.conversorHelper = conversorHelper;
     }
 
@@ -48,7 +47,7 @@ class RepositoryImp implements Repository {
     private Concept createConcept(String term) {
         Concept concept = new Concept();
         concept.setTerm(term);
-        concept.setSource(Source.WIKIPEDIA);
+        concept.setSource(Source.BIGHUGELABS);
         return concept;
     }
 

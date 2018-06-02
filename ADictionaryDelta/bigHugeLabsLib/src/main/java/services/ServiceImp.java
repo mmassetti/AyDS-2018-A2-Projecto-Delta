@@ -5,7 +5,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ServiceImp implements Service {
-    private WordsBighugelabsAPI wikiAPI;
+    private WordsBighugelabsAPI wbhlAPI;
 
     public ServiceImp() {
         connect();
@@ -16,13 +16,13 @@ public class ServiceImp implements Service {
                 .baseUrl("http://words.bighugelabs.com/api/2/")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
-        wikiAPI = retrofit.create(WordsBighugelabsAPI.class);
+        wbhlAPI = retrofit.create(WordsBighugelabsAPI.class);
     }
 
     public String getMeaning(String term) throws Exception {
         String meaning = null;
         Response<String> callResponse;
-        callResponse = wikiAPI.getTerm(term).execute();
+        callResponse = wbhlAPI.getTerm(term).execute();
         meaning = callResponse.body();
         return meaning;
     }
