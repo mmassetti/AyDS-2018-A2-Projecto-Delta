@@ -13,10 +13,9 @@ public class ModelModule {
 
     private ModelModule() {
         DataBaseHelper dataBaseHelper = ModuleDataBase.getInstance().getDataBaseHelper();
-        ConversorHelper conversorHelper = new ConversorHelperImp();
         Service service = getService();
         ExceptionHandler handler = ModuleExceptions.getInstance().getHandler();
-        Repository repository = new RepositoryImp(service, dataBaseHelper, conversorHelper, handler);
+        Repository repository = new RepositoryImp(service, dataBaseHelper, handler);
         conceptModel = new ConceptModelImp(repository);
     }
 

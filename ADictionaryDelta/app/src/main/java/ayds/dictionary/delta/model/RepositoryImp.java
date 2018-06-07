@@ -12,14 +12,12 @@ class RepositoryImp implements Repository {
     private Service service;
     private DataBaseHelper dataBaseHelper;
     private ExceptionHandler handler;
-    private ConversorHelper conversorHelper;
     private FormatChecker formatChecker = new FormatCheckerImp();
 
-    RepositoryImp(Service service, DataBaseHelper dataBaseHelper, ConversorHelper conversorHelper, ExceptionHandler handler) {
+    RepositoryImp(Service service, DataBaseHelper dataBaseHelper, ExceptionHandler handler) {
         this.service = service;
         this.dataBaseHelper = dataBaseHelper;
         this.handler = handler;
-        this.conversorHelper = conversorHelper;
     }
 
     public Concept searchTerm(String term) {
@@ -35,7 +33,6 @@ class RepositoryImp implements Repository {
             } else {
                 meaning = searchTermOnService(term);
                 formatChecker.checkBadResult(meaning);
-                meaning = convertFinalString(meaning);
                 myConcept.setMeaning(meaning);
                 dataBaseHelper.saveConcept(myConcept);
             }
@@ -60,7 +57,5 @@ class RepositoryImp implements Repository {
         }
     }
 
-    private String convertFinalString(String meaning) {
-        return conversorHelper.convertString(meaning);
-    }
+
 }
