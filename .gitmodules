@@ -1,6 +1,6 @@
 [submodule "ADictionaryDelta/bhlLIB"]
 	path = ADictionaryDelta/bhlLIB
-	url = https://github.com/juanfmoyano/bhlLIB.git
+	url = https://github.com/juanfmoyano/bhlLIB
 [submodule "ADictionaryDelta/WikipediaLib"]
 	path = ADictionaryDelta/WikipediaLib
 	url = https://github.com/JuanJou/WikipediaLib/
