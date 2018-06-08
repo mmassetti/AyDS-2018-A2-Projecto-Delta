@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mmassetti\\Desktop\\Entrega2-Final\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
+            "outputFile": "C:\\Users\\Juanfri\\Desktop\\A2-Proyecto-Delta-Entrega3\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d6572c093933f5b5ab68ce6ca8b5327b\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Juanfri\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\4614f8d80b572bf3843a822c1ac0dbe4\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ca81565355fa80f87209db21c11d6e13\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Juanfri\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\4650152fb18ec7ff0579dec860e8efac\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -1,1 +1,1 @@
-include ':app', ':wikipediaLib'
+include ':app', ':bhlLIB'

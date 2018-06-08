@@ -2,8 +2,10 @@ package ayds.dictionary.delta.model;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
 import ayds.dictionary.delta.model.database.ModuleDataBase;
+import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
+import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
 import services.Service;
-import services.ServiceImp;
+import services.ServiceModule;
 
 public class ModelModule {
     private static ModelModule instance;
@@ -11,9 +13,9 @@ public class ModelModule {
 
     private ModelModule() {
         DataBaseHelper dataBaseHelper = ModuleDataBase.getInstance().getDataBaseHelper();
-        ConversorHelper conversorHelper = new ConversorHelperImp();
-        Service service = new ServiceImp();
-        Repository repository = new RepositoryImp(service, dataBaseHelper, conversorHelper);
+        Service service = getService();
+        ExceptionHandler handler = ModuleExceptions.getInstance().getHandler();
+        Repository repository = new RepositoryImp(service, dataBaseHelper, handler);
         conceptModel = new ConceptModelImp(repository);
     }
 
@@ -25,5 +27,9 @@ public class ModelModule {
 
     public ConceptModel getConceptModel() {
         return conceptModel;
+    }
+
+    private Service getService(){
+        return ServiceModule.getInstance().getService();
     }
 }
