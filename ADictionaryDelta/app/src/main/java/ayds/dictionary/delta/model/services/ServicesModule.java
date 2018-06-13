@@ -1,6 +1,7 @@
 package ayds.dictionary.delta.model.services;
 
-import com.example.yandex.service.ServiceModule;
+import com.example.yandex.service.YandexModule;
+
 import DataWikipedia.DataWikipediaModule;
 import ayds.dictionary.delta.services.BigHugeLabsModule;
 
@@ -13,9 +14,8 @@ public class ServicesModule {
         servicesFactory = new ServicesFactoryImp(
             BigHugeLabsModule.getInstance().getBigHugeLabsService(),
             DataWikipediaModule.getInstance().getDataWikipedia(),
-            ServiceModule.getInstance().getTranslatorService()
+            YandexModule.getInstance().getTranslatorService()
         );
-        //Deberia ser YandexModule
 
         servicesManager = new ServicesManagerImp(servicesFactory);
     }
