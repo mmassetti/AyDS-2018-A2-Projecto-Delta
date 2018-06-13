@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.List;
+
 import ayds.dictionary.delta.R;
 import ayds.dictionary.delta.controller.ControllerModule;
 import ayds.dictionary.delta.controller.MeaningController;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText wordField;
     private Button goButton;
     private ProgressBar progressBar;
-    private TextView resultPane, sourceLabel;
+    private TextView resultPane;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
     private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
@@ -49,13 +51,11 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
-            public void didUpdateTerm(final Concept concept) {
-                final String textToSet = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm());
+            public void didUpdateTerm(final List<Concept> meanings) {
+                final String textToSet = buildString(meanings);
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane(textToSet);
-                        String source = concept.getSource().toString();
-                        sourceLabel.setText(getString(R.string.source, source));
                     }
                 });
             }
@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
         progressBarHandler = new Handler();
-        sourceLabel = findViewById(R.id.sourceLabel);
     }
 
     private void setApplicationContext() {
@@ -129,6 +128,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void searchMeaningOfTheTerm(String term) {
         meaningController.searchMeaning(term);
+    }
+
+    private String buildString(List<Concept> meanings){
+        final String doubleSpace = ""+"\n"+"\n";
+        String finalString="";
+        String meaningText;
+        for (Concept concept : meanings){
+            meaningText = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm()) + doubleSpace;
+            finalString = finalString + meaningText;
+        }
+        return finalString;
     }
 
     private String transformMeaningAndTerm(String meaning, String term) {

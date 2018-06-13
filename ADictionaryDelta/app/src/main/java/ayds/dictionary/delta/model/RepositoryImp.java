@@ -1,61 +1,88 @@
 package ayds.dictionary.delta.model;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
-import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
+import ayds.dictionary.delta.model.exceptions.BadFormatException;
+import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
-import services.Service;
+import ayds.dictionary.delta.model.services.ServicesManager;
 
 
 class RepositoryImp implements Repository {
-    private Service service;
+    private ServicesManager servicesManager;
     private DataBaseHelper dataBaseHelper;
     private ExceptionHandler handler;
-    private FormatChecker formatChecker = new FormatCheckerImp();
+    private FormatChecker formatChecker;
+    private final String prefixExistsInDB = "[*]";
 
-    RepositoryImp(Service service, DataBaseHelper dataBaseHelper, ExceptionHandler handler) {
-        this.service = service;
+    RepositoryImp(ServicesManager servicesManager, DataBaseHelper dataBaseHelper, ExceptionHandler handler, FormatChecker formatChecker) {
+        this.servicesManager = servicesManager;
         this.dataBaseHelper = dataBaseHelper;
         this.handler = handler;
+        this.formatChecker = formatChecker;
     }
 
-    public Concept searchTerm(String term) {
-        String meaning;
-        Concept myConcept = createConcept(term);
+    public List<Concept> searchTerm(String term) {
+        List<Concept> meaningsList = new ArrayList<>();
         try {
-            formatChecker.checkFormat(term);
-            meaning = dataBaseHelper.getConceptMeaning(myConcept);
-            final String prefixExistsInDb = "[*]";
-            if (meaning != null) { // exists in db
-                meaning = prefixExistsInDb + meaning;
-                myConcept.setMeaning(meaning);
-            } else {
-                meaning = searchTermOnService(term);
-                formatChecker.checkBadResult(meaning);
-                myConcept.setMeaning(meaning);
-                dataBaseHelper.saveConcept(myConcept);
+            checkForBadFormat(term);
+            String meaning;
+            Concept myConcept = createConcept(term);
+            for (Source source : allServices()) {
+                myConcept.setSource(source);
+                meaning = getMeaningFromDB(myConcept);
+                if (existsInDB(meaning)) {
+                    meaning = prefixExistsInDB + meaning;
+                    myConcept.setMeaning(meaning);
+                } else {
+                    meaning = getMeaningFromService(myConcept);
+                    checkForBadMeaning(meaning);
+                    myConcept.setMeaning(meaning);
+                    saveConceptOnDB(myConcept);
+                }
+                meaningsList.add(myConcept);
             }
         } catch (Exception e) {
             handler.handleException(e);
         }
-        return myConcept;
+        return meaningsList;
     }
+
 
     private Concept createConcept(String term) {
         Concept concept = new Concept();
         concept.setTerm(term);
-        concept.setSource(Source.BIGHUGELABS);
         return concept;
     }
 
-    private String searchTermOnService(String term) throws Exception {
-        try {
-            return service.getMeaning(term);
-        } catch (IOException e) {
-            throw new ConnectionErrorException();
-        }
+    private boolean existsInDB(String meaning) {
+        return meaning != null;
     }
 
+    private Set<Source> allServices() {
+        return servicesManager.getAllServices();
+    }
 
+    private void checkForBadFormat(String term) throws BadFormatException {
+        formatChecker.checkFormat(term);
+    }
+
+    private void checkForBadMeaning(String meaning) throws EmptyResultException {
+        formatChecker.checkBadResult(meaning);
+    }
+
+    private String getMeaningFromDB(Concept concept) {
+        return dataBaseHelper.getConceptMeaning(concept);
+    }
+
+    private String getMeaningFromService(Concept concept) throws Exception {
+        return servicesManager.getMeaning(concept.getTerm(), concept.getSource());
+    }
+
+    private void saveConceptOnDB(Concept concept){
+        dataBaseHelper.saveConcept(concept);
+    }
 }

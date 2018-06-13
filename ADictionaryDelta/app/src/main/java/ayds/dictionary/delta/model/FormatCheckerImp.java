@@ -22,11 +22,33 @@ public class FormatCheckerImp implements FormatChecker {
         boolean wellFormedTerm = true;
         for (int i = 0; i < term.length() && wellFormedTerm; i++) {
             termLetter = term.charAt(i);
-            if (!Character.isLetter(termLetter)) {
+            if (!validCharacter(term,i,termLetter)) {
                 wellFormedTerm = false;
             }
         }
         return wellFormedTerm;
+    }
+
+    private boolean validCharacter(String term, int position, char character) {
+        if (!isLetter(character) || isAnotherSpace(term, position, character))
+            return false;
+        else
+            return true;
+    }
+
+    private boolean isLetter(char character) {
+        return Character.isLetter(character);
+    }
+
+    private boolean isAnotherSpace(String term, int position, char actualChar) {
+        if (position != 0) {
+            char previousChar = term.charAt(position - 1);
+            if (Character.isSpaceChar(previousChar) && Character.isSpaceChar(actualChar))
+                return true;
+            else
+                return false;
+        } else
+            return false;
     }
 
     public boolean isValidTerm(String term) {

@@ -1,5 +1,7 @@
 package ayds.dictionary.delta.model;
 
+import java.util.List;
+
 public interface Repository {
-    Concept searchTerm(String term);
+    List<Concept> searchTerm(String term);
 }

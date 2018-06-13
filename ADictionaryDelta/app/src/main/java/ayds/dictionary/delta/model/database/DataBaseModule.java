@@ -3,18 +3,18 @@ package ayds.dictionary.delta.model.database;
 import android.content.Context;
 import ayds.dictionary.delta.view.ViewModule;
 
-public class ModuleDataBase {
-    private static ModuleDataBase instance;
+public class DataBaseModule {
+    private static DataBaseModule instance;
     private DataBaseHelper dataBaseHelper;
 
-    private ModuleDataBase() {
+    private DataBaseModule() {
         Context context = ViewModule.getInstance().getContext();
         dataBaseHelper = new DataBaseHelperImp(context);
     }
 
-    public static ModuleDataBase getInstance() {
+    public static DataBaseModule getInstance() {
         if (instance == null) {
-            instance = new ModuleDataBase();
+            instance = new DataBaseModule();
         }
         return instance;
     }

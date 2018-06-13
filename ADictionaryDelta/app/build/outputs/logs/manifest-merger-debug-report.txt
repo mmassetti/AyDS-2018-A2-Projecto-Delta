@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
 MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\4650152fb18ec7ff0579dec860e8efac\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5b002353ec4bc2ed78f4b3467221f50e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6f0fd6246c221fd34c9a02b2e870c78f\AndroidManifest.xml:17:1-22:12
@@ -18,59 +18,59 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Juanfri\.gradl
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f099c157c78890a68c4014162899eb07\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\56013fb2962029d416d66c80bfd74fc2\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e06291156a6ce2a37400762e077c6564\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:11-42
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:11-42
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:3:3-61
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:3:3-61
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:3-65
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:3-65
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:20-62
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:20-62
 application
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:7:3-21:17
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:7:3-21:17
 	android:supportsRtl
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:12:5-31
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:12:5-31
 	android:label
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:10:5-46
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:10:5-46
 	android:roundIcon
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:11:5-50
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:11:5-50
 	android:icon
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:9:5-39
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:9:5-39
 	android:allowBackup
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:8:5-31
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:8:5-31
 	android:theme
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:13:5-36
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:13:5-36
 activity#ayds.dictionary.delta.view.MainActivity
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:5-20:16
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:5-20:16
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:15-48
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:15-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:15:7-19:23
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:15:7-19:23
 action#android.intent.action.MAIN
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:9-61
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:9-61
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:17-58
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:17-58
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:9-69
+ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:9-69
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:19-66
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:19-66
 uses-sdk
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\4650152fb18ec7ff0579dec860e8efac\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\4650152fb18ec7ff0579dec860e8efac\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5b002353ec4bc2ed78f4b3467221f50e\AndroidManifest.xml:20:5-44
@@ -99,13 +99,13 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Juanfri\.gradle\cach
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\56013fb2962029d416d66c80bfd74fc2\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e06291156a6ce2a37400762e077c6564\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e06291156a6ce2a37400762e077c6564\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega4\ADictionaryDelta\app\src\main\AndroidManifest.xml

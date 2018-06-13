@@ -1,21 +1,24 @@
 package ayds.dictionary.delta.model;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
-import ayds.dictionary.delta.model.database.ModuleDataBase;
+import ayds.dictionary.delta.model.database.DataBaseModule;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
-import services.Service;
-import services.ServiceModule;
+import ayds.dictionary.delta.model.services.ServicesManager;
+import ayds.dictionary.delta.model.services.ServicesModule;
+import ayds.dictionary.delta.services.BigHugeLabsService;
+import ayds.dictionary.delta.services.BigHugeLabsModule;
 
 public class ModelModule {
     private static ModelModule instance;
     private ConceptModel conceptModel;
 
     private ModelModule() {
-        DataBaseHelper dataBaseHelper = ModuleDataBase.getInstance().getDataBaseHelper();
-        Service service = getService();
-        ExceptionHandler handler = ModuleExceptions.getInstance().getHandler();
-        Repository repository = new RepositoryImp(service, dataBaseHelper, handler);
+        DataBaseHelper dataBaseHelper = getDBHelper();
+        ServicesManager servicesManager = getServicesManager();
+        ExceptionHandler handler = getExceptionHandler();
+        FormatChecker formatChecker = new FormatCheckerImp();
+        Repository repository = new RepositoryImp(servicesManager, dataBaseHelper, handler, formatChecker);
         conceptModel = new ConceptModelImp(repository);
     }
 
@@ -29,7 +32,17 @@ public class ModelModule {
         return conceptModel;
     }
 
-    private Service getService(){
-        return ServiceModule.getInstance().getService();
+    private DataBaseHelper getDBHelper(){
+        return DataBaseModule.getInstance().getDataBaseHelper();
     }
+
+    private ExceptionHandler getExceptionHandler(){
+        return ModuleExceptions.getInstance().getHandler();
+    }
+
+    private ServicesManager getServicesManager(){
+        return ServicesModule.getInstance().getServicesManager();
+    }
+
+
 }

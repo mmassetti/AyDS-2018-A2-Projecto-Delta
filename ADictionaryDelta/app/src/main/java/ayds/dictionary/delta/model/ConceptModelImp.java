@@ -1,5 +1,7 @@
 package ayds.dictionary.delta.model;
 
+import java.util.List;
+
 import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
 import ayds.dictionary.delta.model.listeners.ConceptModelListener;
 import ayds.dictionary.delta.model.listeners.ErrorListener;
@@ -24,20 +26,19 @@ class ConceptModelImp implements ConceptModel {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Concept concept = searchTermOnRepository(term);
-                if (concept.getMeaning() != null)
-                    notifyListenerConceptModel(concept);
+                List<Concept> meanings = searchTermOnRepository(term);
+                notifyListenerConceptModel(meanings);
             }
         }).start();
     }
 
-    private void notifyListenerConceptModel(Concept concept) {
+    private void notifyListenerConceptModel(List<Concept> meanings) {
         if (conceptListener != null) {
-            conceptListener.didUpdateTerm(concept);
+            conceptListener.didUpdateTerm(meanings);
         }
     }
 
-    private Concept searchTermOnRepository(String term) {
+    private List<Concept> searchTermOnRepository(String term) {
         return repository.searchTerm(term);
     }
 

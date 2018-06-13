@@ -1,1 +1,1 @@
-include ':app', ':bhlLIB'
+include ':app', ':bhlLIB', ':WikipediaLib', ':yandexservice'
