@@ -2,7 +2,6 @@ package ayds.dictionary.delta.view;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
@@ -132,20 +131,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private String buildString(List<Concept> meanings){
-        final String doubleSpace = ""+"\n"+"\n";
-        String finalString="";
+    private String buildString(List<Concept> meanings) {
+        final String simpleSpace = "" + "\n";
+        final String doubleSpace = "" + simpleSpace + simpleSpace;
+        String finalString = "";
         String meaningText;
-        for (Concept concept : meanings){
-            meaningText = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm())+doubleSpace;
-            finalString = finalString + meaningText;
+        for (Concept concept : meanings) {
+            String stringSource = concept.getSource().toString();
+            meaningText = addBoldSource(stringSource) + simpleSpace;
+            meaningText += transformMeaningAndTerm(concept.getMeaning(), concept.getTerm()) + doubleSpace;
+            finalString += meaningText;
         }
         return finalString;
     }
 
 
-
     private String transformMeaningAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
     }
+
+    private String addBoldSource(String source){
+        return textConverterHelper.textBold(source);
+    }
+
+
 }
