@@ -1,5 +1,7 @@
 package ayds.dictionary.delta.model;
 
+import android.util.Log;
+
 import ayds.dictionary.delta.model.exceptions.BadFormatException;
 import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 
@@ -13,11 +15,12 @@ public class FormatCheckerImp implements FormatChecker {
     }
 
     public void checkFormat(String term) throws BadFormatException {
+        Log.i("msg","El termino es "+term);
         if (!isWellFormedTermFormat(term) || !isValidTerm(term))
             throw new BadFormatException();
     }
 
-    public boolean isWellFormedTermFormat(String term) {
+    private boolean isWellFormedTermFormat(String term) {
         char termLetter;
         boolean wellFormedTerm = true;
         for (int i = 0; i < term.length() && wellFormedTerm; i++) {
@@ -26,6 +29,7 @@ public class FormatCheckerImp implements FormatChecker {
                 wellFormedTerm = false;
             }
         }
+        Log.i("valor1","El valor que devuelve isWellFormedTerm es "+wellFormedTerm);
         return wellFormedTerm;
     }
 
@@ -44,20 +48,22 @@ public class FormatCheckerImp implements FormatChecker {
         if (position != 0) {
             char previousChar = term.charAt(position - 1);
             if (Character.isSpaceChar(previousChar) && Character.isSpaceChar(actualChar))
-                return true;
+                return  true;
             else
                 return false;
         } else
             return false;
     }
 
-    public boolean isValidTerm(String term) {
+    private boolean isValidTerm(String term) {
         boolean validTerm = true;
         final String emptyString = "";
         boolean nullTerm = term == null;
         boolean emptyTerm = term.equals(emptyString);
-        if (nullTerm || emptyTerm)
+        if (nullTerm || emptyTerm) {
             validTerm = false;
+        }
+        Log.i("valor2","El valor que devuelve isValidTerm es "+validTerm);
         return validTerm;
     }
 }

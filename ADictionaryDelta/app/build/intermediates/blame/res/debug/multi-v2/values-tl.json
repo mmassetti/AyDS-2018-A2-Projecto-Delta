@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Juanfri\\Desktop\\A2-Proyecto-Delta-Entrega4\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
+            "outputFile": "C:\\Users\\mmassetti\\Desktop\\VersionesProyecto\\Entrega4-V1\\ADictionaryDelta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Juanfri\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\4650152fb18ec7ff0579dec860e8efac\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\895829ac7731f8fd2c2968553a189691\\res\\values-tl\\values-tl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Juanfri\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\4614f8d80b572bf3843a822c1ac0dbe4\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\mmassetti\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\69a2e65d2ea09a65ad1db37df9c74147\\res\\values-tl\\values-tl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -3,7 +3,10 @@ package ayds.dictionary.delta.model.services;
 import com.example.yandex.service.YandexModule;
 
 import DataWikipedia.DataWikipediaModule;
+import ayds.dictionary.delta.model.FormatChecker;
+import ayds.dictionary.delta.model.FormatCheckerImp;
 import ayds.dictionary.delta.services.BigHugeLabsModule;
+
 
 public class ServicesModule {
     private static ServicesModule instance;
@@ -11,7 +14,8 @@ public class ServicesModule {
     private ServicesManager servicesManager;
 
     private ServicesModule() {
-        servicesFactory = new ServicesFactoryImp(
+        FormatChecker formatChecker = new FormatCheckerImp();
+        servicesFactory = new ServicesFactoryImp(formatChecker,
             BigHugeLabsModule.getInstance().getBigHugeLabsService(),
             DataWikipediaModule.getInstance().getDataWikipedia(),
             YandexModule.getInstance().getTranslatorService()

@@ -12,11 +12,11 @@ import ayds.dictionary.delta.model.services.ServicesManager;
 
 
 class RepositoryImp implements Repository {
+    private final String prefixExistsInDB = "[*]";
     private ServicesManager servicesManager;
     private DataBaseHelper dataBaseHelper;
     private ExceptionHandler handler;
     private FormatChecker formatChecker;
-    private final String prefixExistsInDB = "[*]";
 
     RepositoryImp(ServicesManager servicesManager, DataBaseHelper dataBaseHelper, ExceptionHandler handler, FormatChecker formatChecker) {
         this.servicesManager = servicesManager;
@@ -27,11 +27,10 @@ class RepositoryImp implements Repository {
 
     public List<Concept> searchTerm(String term) {
         List<Concept> meaningsList = new ArrayList<>();
-        try {
-            checkForBadFormat(term);
-            String meaning;
-            Concept myConcept = createConcept(term);
-            for (Source source : allServices()) {
+        String meaning;
+        for (Source source : allServices()) {
+            try {
+                Concept myConcept = createConcept(term);
                 myConcept.setSource(source);
                 meaning = getMeaningFromDB(myConcept);
                 if (existsInDB(meaning)) {
@@ -44,9 +43,9 @@ class RepositoryImp implements Repository {
                     saveConceptOnDB(myConcept);
                 }
                 meaningsList.add(myConcept);
+            } catch (Exception e) {
+                handler.handleException(e);
             }
-        } catch (Exception e) {
-            handler.handleException(e);
         }
         return meaningsList;
     }
@@ -66,10 +65,6 @@ class RepositoryImp implements Repository {
         return servicesManager.getAllServices();
     }
 
-    private void checkForBadFormat(String term) throws BadFormatException {
-        formatChecker.checkFormat(term);
-    }
-
     private void checkForBadMeaning(String meaning) throws EmptyResultException {
         formatChecker.checkBadResult(meaning);
     }
@@ -82,7 +77,7 @@ class RepositoryImp implements Repository {
         return servicesManager.getMeaning(concept.getTerm(), concept.getSource());
     }
 
-    private void saveConceptOnDB(Concept concept){
+    private void saveConceptOnDB(Concept concept) {
         dataBaseHelper.saveConcept(concept);
     }
 }

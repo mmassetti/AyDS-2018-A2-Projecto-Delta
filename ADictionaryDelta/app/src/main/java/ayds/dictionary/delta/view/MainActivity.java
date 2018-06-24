@@ -113,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setTextOnResultPane(String textToSet) {
-        resultPane.setText(Html.fromHtml(textToSet));
+        String finalText = textToSet.replaceAll("(\r\n|\n)", "<br />"); //Keep new lines
+        resultPane.setText(Html.fromHtml(finalText));
         removeProgressBar();
     }
 
@@ -130,16 +131,19 @@ public class MainActivity extends AppCompatActivity {
         meaningController.searchMeaning(term);
     }
 
+
     private String buildString(List<Concept> meanings){
         final String doubleSpace = ""+"\n"+"\n";
         String finalString="";
         String meaningText;
         for (Concept concept : meanings){
-            meaningText = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm()) + doubleSpace;
+            meaningText = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm())+doubleSpace;
             finalString = finalString + meaningText;
         }
         return finalString;
     }
+
+
 
     private String transformMeaningAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
