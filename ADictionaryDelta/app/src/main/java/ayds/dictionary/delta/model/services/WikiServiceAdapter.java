@@ -1,6 +1,7 @@
 package ayds.dictionary.delta.model.services;
 
 import DataWikipedia.DataWikipedia;
+import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
 
 class WikiServiceAdapter implements ServiceDef {
     private DataWikipedia dataWikipedia;
@@ -9,7 +10,11 @@ class WikiServiceAdapter implements ServiceDef {
         this.dataWikipedia = dataWikipedia;
     }
 
-    public String getMeaning(String term) throws Exception {
-        return dataWikipedia.getMeaning(term);
+    public String getMeaning(String term) throws ConnectionErrorException {
+        try {
+            return dataWikipedia.getMeaning(term);
+        } catch (Exception e){
+            throw new ConnectionErrorException();
+        }
     }
 }
