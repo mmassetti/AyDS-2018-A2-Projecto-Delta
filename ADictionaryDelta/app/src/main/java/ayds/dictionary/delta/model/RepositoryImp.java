@@ -44,7 +44,7 @@ class RepositoryImp implements Repository {
                 }
                 meaningsList.add(myConcept);
             } catch (Exception e) {
-                handler.handleException(e);
+                handler.handleException(source, e);
             }
         }
         return meaningsList;
