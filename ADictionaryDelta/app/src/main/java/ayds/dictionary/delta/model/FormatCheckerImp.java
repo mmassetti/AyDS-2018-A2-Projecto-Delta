@@ -58,9 +58,11 @@ public class FormatCheckerImp implements FormatChecker {
     private boolean isValidTerm(String term) {
         boolean validTerm = true;
         final String emptyString = "";
+        final String spaceString = " ";
         boolean nullTerm = term == null;
+        boolean spaceTerm  = term.equals(spaceString);
         boolean emptyTerm = term.equals(emptyString);
-        if (nullTerm || emptyTerm) {
+        if (nullTerm || emptyTerm || spaceTerm) {
             validTerm = false;
         }
         Log.i("valor2","El valor que devuelve isValidTerm es "+validTerm);

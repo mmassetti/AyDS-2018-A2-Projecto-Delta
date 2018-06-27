@@ -7,6 +7,7 @@ import java.io.IOException;
 import ayds.dictionary.delta.model.FormatChecker;
 import ayds.dictionary.delta.model.exceptions.BadFormatException;
 import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
+import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 import ayds.dictionary.delta.services.BigHugeLabsService;
 
 class BHLServiceAdapter implements ServiceDef {
