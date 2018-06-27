@@ -3,6 +3,7 @@ package ayds.dictionary.delta.model.services;
 import android.util.Log;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 import ayds.dictionary.delta.model.FormatChecker;
 import ayds.dictionary.delta.model.exceptions.BadFormatException;
@@ -20,7 +21,7 @@ class BHLServiceAdapter implements ServiceDef {
     }
 
     @Override
-    public String getMeaning(String term) throws Exception {
+    public String getMeaning(String term) throws ConnectionErrorException, BadFormatException, EmptyResultException {
         try {
             formatChecker.checkFormat(term);
             return bigHugeLabsService.getMeaning(term);

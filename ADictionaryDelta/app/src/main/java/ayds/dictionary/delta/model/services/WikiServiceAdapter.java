@@ -14,7 +14,7 @@ class WikiServiceAdapter implements ServiceDef {
         this.dataWikipedia = dataWikipedia;
     }
 
-    public String getMeaning(String term) throws Exception {
+    public String getMeaning(String term) throws ConnectionErrorException, EmptyResultException {
         try {
             return dataWikipedia.getMeaning(term);
         } catch (IOException e){

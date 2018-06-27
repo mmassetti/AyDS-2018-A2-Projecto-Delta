@@ -15,7 +15,7 @@ class YandexServiceAdapter implements ServiceDef{
     }
 
     @Override
-    public String getMeaning(String term) throws Exception {
+    public String getMeaning(String term) throws ConnectionErrorException, EmptyResultException {
         try {
             return translatorService.callCreateTranslatedWord(term);
         } catch (IOException e){
