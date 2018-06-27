@@ -5,6 +5,7 @@ import com.example.yandex.service.TranslatorService;
 import java.io.IOException;
 
 import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
+import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 
 class YandexServiceAdapter implements ServiceDef{
     private TranslatorService translatorService;
@@ -19,6 +20,8 @@ class YandexServiceAdapter implements ServiceDef{
             return translatorService.callCreateTranslatedWord(term);
         } catch (IOException e){
             throw new ConnectionErrorException();
+        } catch (Exception e){
+            throw new EmptyResultException();
         }
     }
 }

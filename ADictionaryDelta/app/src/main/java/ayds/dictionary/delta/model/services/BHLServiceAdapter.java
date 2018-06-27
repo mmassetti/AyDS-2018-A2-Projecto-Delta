@@ -28,6 +28,8 @@ class BHLServiceAdapter implements ServiceDef {
             throw new ConnectionErrorException();
         } catch (BadFormatException e){
             throw new BadFormatException();
+        } catch (Exception e){
+            throw new EmptyResultException();
         }
     }
 }

@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import DataWikipedia.DataWikipedia;
 import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
+import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 
 class WikiServiceAdapter implements ServiceDef {
@@ -18,6 +19,8 @@ class WikiServiceAdapter implements ServiceDef {
             return dataWikipedia.getMeaning(term);
         } catch (IOException e){
             throw new ConnectionErrorException();
+        } catch (Exception e){
+            throw new EmptyResultException();
         }
     }
 }
