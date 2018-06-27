@@ -29,7 +29,7 @@ class RepositoryImp implements Repository {
     }
 
     public List<FinalConceptResult> searchTerm(String term) {
-        List<FinalConceptResult> finalList;
+        List<FinalConceptResult> finalList = new ArrayList<>();
         List<Concept> meaningsList = new ArrayList<>();
         Map<Source, Exception> sourceExceptionMap = new TreeMap<>();
         String meaning;
@@ -52,8 +52,8 @@ class RepositoryImp implements Repository {
                 sourceExceptionMap.put(source,e);
             }
         }
-        checkForConnection(sourceExceptionMap);
-        finalList = buildFinalList(term, meaningsList, sourceExceptionMap);
+        if (thereIsConnection(sourceExceptionMap))
+            finalList = buildFinalList(term, meaningsList, sourceExceptionMap);
         return finalList;
     }
 
@@ -88,12 +88,14 @@ class RepositoryImp implements Repository {
         dataBaseHelper.saveConcept(concept);
     }
 
-    private void checkForConnection(Map<Source, Exception> sourceExceptionMap){
+    private boolean thereIsConnection(Map<Source, Exception> sourceExceptionMap){
+        boolean appConnected = true;
         if (!(sourceExceptionMap.isEmpty())) {
-            boolean appConnected = handler.thereIsConnection(sourceExceptionMap);
+            appConnected = handler.thereIsConnection(sourceExceptionMap);
             if (!appConnected)
                 handler.appNotConnected();
         }
+        return appConnected;
     }
 
     private List<FinalConceptResult> buildFinalList(String term, List<Concept> meaningsList, Map<Source,Exception> sourceExceptionMap){

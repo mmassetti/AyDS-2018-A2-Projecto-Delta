@@ -29,7 +29,8 @@ class ConceptModelImp implements ConceptModel {
             @Override
             public void run() {
                 List<FinalConceptResult> meanings = searchTermOnRepository(term);
-                notifyListenerConceptModel(meanings);
+                if(!meanings.isEmpty())
+                    notifyListenerConceptModel(meanings);
             }
         }).start();
     }
