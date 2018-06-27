@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addErrorListener(new ErrorListener() {
             @Override
-            public void didErrorOccur(String message) {
+            public void didErrorOccur(final String message) {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
