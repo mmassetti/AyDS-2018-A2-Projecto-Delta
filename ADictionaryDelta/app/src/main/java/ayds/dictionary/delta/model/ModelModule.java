@@ -6,8 +6,7 @@ import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
 import ayds.dictionary.delta.model.services.ServicesManager;
 import ayds.dictionary.delta.model.services.ServicesModule;
-import ayds.dictionary.delta.services.BigHugeLabsService;
-import ayds.dictionary.delta.services.BigHugeLabsModule;
+import ayds.dictionary.delta.view.ViewModule;
 
 public class ModelModule {
     private static ModelModule instance;
@@ -18,7 +17,8 @@ public class ModelModule {
         ServicesManager servicesManager = getServicesManager();
         ExceptionHandler handler = getExceptionHandler();
         FormatChecker formatChecker = new FormatCheckerImp();
-        Repository repository = new RepositoryImp(servicesManager, dataBaseHelper, handler, formatChecker);
+        ResultsManager resultsManager = new ResultsManagerImp(handler);
+        Repository repository = new RepositoryImp(servicesManager, dataBaseHelper, handler, formatChecker, resultsManager);
         conceptModel = new ConceptModelImp(repository);
     }
 
@@ -36,7 +36,7 @@ public class ModelModule {
         return DataBaseModule.getInstance().getDataBaseHelper();
     }
 
-    private ExceptionHandler getExceptionHandler(){
+    public ExceptionHandler getExceptionHandler(){
         return ModuleExceptions.getInstance().getHandler();
     }
 

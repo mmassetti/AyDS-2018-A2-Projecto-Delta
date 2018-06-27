@@ -2,10 +2,11 @@ package ayds.dictionary.delta.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
-import ayds.dictionary.delta.model.exceptions.BadFormatException;
 import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 import ayds.dictionary.delta.model.services.ServicesManager;
@@ -17,16 +18,20 @@ class RepositoryImp implements Repository {
     private DataBaseHelper dataBaseHelper;
     private ExceptionHandler handler;
     private FormatChecker formatChecker;
+    private ResultsManager resultsManager;
 
-    RepositoryImp(ServicesManager servicesManager, DataBaseHelper dataBaseHelper, ExceptionHandler handler, FormatChecker formatChecker) {
+    RepositoryImp(ServicesManager servicesManager, DataBaseHelper dataBaseHelper, ExceptionHandler handler, FormatChecker formatChecker, ResultsManager resultsManager) {
         this.servicesManager = servicesManager;
         this.dataBaseHelper = dataBaseHelper;
         this.handler = handler;
         this.formatChecker = formatChecker;
+        this.resultsManager = resultsManager;
     }
 
-    public List<Concept> searchTerm(String term) {
+    public List<FinalConceptResult> searchTerm(String term) {
+        List<FinalConceptResult> finalList;
         List<Concept> meaningsList = new ArrayList<>();
+        Map<Source, Exception> sourceExceptionMap = new TreeMap<>();
         String meaning;
         for (Source source : allServices()) {
             try {
@@ -44,10 +49,12 @@ class RepositoryImp implements Repository {
                 }
                 meaningsList.add(myConcept);
             } catch (Exception e) {
-                handler.handleException(source, e);
+                sourceExceptionMap.put(source,e);
             }
         }
-        return meaningsList;
+        checkForConnection(sourceExceptionMap);
+        finalList = buildFinalList(term, meaningsList, sourceExceptionMap);
+        return finalList;
     }
 
 
@@ -79,5 +86,17 @@ class RepositoryImp implements Repository {
 
     private void saveConceptOnDB(Concept concept) {
         dataBaseHelper.saveConcept(concept);
+    }
+
+    private void checkForConnection(Map<Source, Exception> sourceExceptionMap){
+        if (!(sourceExceptionMap.isEmpty())) {
+            boolean appConnected = handler.thereIsConnection(sourceExceptionMap);
+            if (!appConnected)
+                handler.appNotConnected();
+        }
+    }
+
+    private List<FinalConceptResult> buildFinalList(String term, List<Concept> meaningsList, Map<Source,Exception> sourceExceptionMap){
+        return resultsManager.buildList(term, meaningsList, sourceExceptionMap);
     }
 }

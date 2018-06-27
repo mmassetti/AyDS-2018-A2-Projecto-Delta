@@ -17,6 +17,7 @@ import ayds.dictionary.delta.controller.ControllerModule;
 import ayds.dictionary.delta.controller.MeaningController;
 import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.ConceptModel;
+import ayds.dictionary.delta.model.FinalConceptResult;
 import ayds.dictionary.delta.model.ModelModule;
 import ayds.dictionary.delta.model.listeners.ConceptModelListener;
 import ayds.dictionary.delta.model.listeners.ErrorListener;
@@ -28,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView resultPane;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
-    private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
-    private ErrorMessageHelper errorMessageHelper = new ErrorMessageHelperImp();
+    private TextConverterHelper textConverterHelper;
+    private ErrorMessageHelper errorMessageHelper;
     private Handler progressBarHandler;
 
     @Override
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
-            public void didUpdateTerm(final List<Concept> meanings) {
+            public void didUpdateTerm(final List<FinalConceptResult> meanings) {
                 final String textToSet = buildString(meanings);
                 resultPane.post(new Runnable() {
                     public void run() {
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
-                        setTextOnResultPane("");
+                        //setTextOnResultPane("");
                         errorMessageHelper.showPopUpMessage(textToSet, MainActivity.this);
                         removeProgressBar();
                     }
@@ -94,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
         progressBarHandler = new Handler();
+        textConverterHelper = new TextConverterHelperImp();
+        errorMessageHelper = new ErrorMessageHelperImp();
     }
 
     private void setApplicationContext() {
@@ -132,22 +135,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private String buildString(List<Concept> meanings) {
+    private String buildString(List<FinalConceptResult> meanings) {
         final String simpleSpace = "" + "\n";
         final String doubleSpace = "" + simpleSpace + simpleSpace;
         String finalString = "";
         String meaningText;
-        for (Concept concept : meanings) {
+        for (FinalConceptResult concept : meanings) {
             String stringSource = concept.getSource().toString();
             meaningText = addBoldSource(stringSource) + simpleSpace;
-            meaningText += transformMeaningAndTerm(concept.getMeaning(), concept.getTerm()) + doubleSpace;
+            meaningText += transformResultAndTerm(concept.getSourceResult(), concept.getTerm()) + doubleSpace;
             finalString += meaningText;
         }
         return finalString;
     }
 
 
-    private String transformMeaningAndTerm(String meaning, String term) {
+    private String transformResultAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
     }
 
