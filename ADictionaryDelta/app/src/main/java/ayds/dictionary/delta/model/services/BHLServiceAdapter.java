@@ -22,9 +22,7 @@ class BHLServiceAdapter extends ServiceDef {
             String meaning = bigHugeLabsService.getMeaning(term);
             checkForBadMeaning(meaning);
             return meaning;
-        } catch (EmptyResultException e) {
-            throw e;
-        } catch (BadFormatException e) {
+        } catch (EmptyResultException | BadFormatException e) {
             throw e;
         } catch (Exception e) {
             throw new ConnectionErrorException();

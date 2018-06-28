@@ -22,9 +22,7 @@ class YandexServiceAdapter extends ServiceDef {
             String meaning = translatorService.callCreateTranslatedWord(term);
             checkForBadMeaning(meaning);
             return meaning;
-        } catch (BadFormatException e) {
-            throw e;
-        } catch (EmptyResultException e) {
+        } catch (BadFormatException | EmptyResultException e) {
             throw e;
         } catch (Exception e) {
             throw new ConnectionErrorException();

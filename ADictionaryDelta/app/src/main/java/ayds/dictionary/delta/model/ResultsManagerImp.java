@@ -9,7 +9,7 @@ import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 class ResultsManagerImp implements ResultsManager {
     private ExceptionHandler handler;
 
-    public ResultsManagerImp(ExceptionHandler handler) {
+    ResultsManagerImp(ExceptionHandler handler) {
         this.handler = handler;
     }
 
