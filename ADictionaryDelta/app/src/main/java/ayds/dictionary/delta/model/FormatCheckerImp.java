@@ -18,6 +18,19 @@ public class FormatCheckerImp implements FormatChecker {
             throw new BadFormatException();
     }
 
+    public boolean isValidTerm(String term) {
+        boolean validTerm = true;
+        final String emptyString = "";
+        final String spaceString = " ";
+        boolean nullTerm = term == null;
+        boolean spaceTerm  = term.equals(spaceString);
+        boolean emptyTerm = term.equals(emptyString);
+        if (nullTerm || emptyTerm || spaceTerm) {
+            validTerm = false;
+        }
+        return validTerm;
+    }
+
     private boolean isWellFormedTermFormat(String term) {
         char termLetter;
         boolean wellFormedTerm = true;
@@ -52,16 +65,5 @@ public class FormatCheckerImp implements FormatChecker {
             return false;
     }
 
-    private boolean isValidTerm(String term) {
-        boolean validTerm = true;
-        final String emptyString = "";
-        final String spaceString = " ";
-        boolean nullTerm = term == null;
-        boolean spaceTerm  = term.equals(spaceString);
-        boolean emptyTerm = term.equals(emptyString);
-        if (nullTerm || emptyTerm || spaceTerm) {
-            validTerm = false;
-        }
-        return validTerm;
-    }
+
 }
