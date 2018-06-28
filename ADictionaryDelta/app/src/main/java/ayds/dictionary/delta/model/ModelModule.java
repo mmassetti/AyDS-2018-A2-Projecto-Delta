@@ -6,7 +6,6 @@ import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
 import ayds.dictionary.delta.model.services.ServicesManager;
 import ayds.dictionary.delta.model.services.ServicesModule;
-import ayds.dictionary.delta.view.ViewModule;
 
 public class ModelModule {
     private static ModelModule instance;
@@ -32,15 +31,15 @@ public class ModelModule {
         return conceptModel;
     }
 
-    private DataBaseHelper getDBHelper(){
+    private DataBaseHelper getDBHelper() {
         return DataBaseModule.getInstance().getDataBaseHelper();
     }
 
-    public ExceptionHandler getExceptionHandler(){
+    public ExceptionHandler getExceptionHandler() {
         return ModuleExceptions.getInstance().getHandler();
     }
 
-    private ServicesManager getServicesManager(){
+    private ServicesManager getServicesManager() {
         return ServicesModule.getInstance().getServicesManager();
     }
 

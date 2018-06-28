@@ -7,7 +7,6 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
-import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 import ayds.dictionary.delta.model.services.ServicesManager;
 
@@ -17,14 +16,12 @@ class RepositoryImp implements Repository {
     private ServicesManager servicesManager;
     private DataBaseHelper dataBaseHelper;
     private ExceptionHandler handler;
-    private FormatChecker formatChecker;
     private ResultsManager resultsManager;
 
-    RepositoryImp(ServicesManager servicesManager, DataBaseHelper dataBaseHelper, ExceptionHandler handler, FormatChecker formatChecker, ResultsManager resultsManager) {
+    RepositoryImp(ServicesManager servicesManager, DataBaseHelper dataBaseHelper, ExceptionHandler handler, ResultsManager resultsManager) {
         this.servicesManager = servicesManager;
         this.dataBaseHelper = dataBaseHelper;
         this.handler = handler;
-        this.formatChecker = formatChecker;
         this.resultsManager = resultsManager;
     }
 
@@ -48,7 +45,7 @@ class RepositoryImp implements Repository {
                 }
                 meaningsList.add(myConcept);
             } catch (Exception e) {
-                sourceExceptionMap.put(source,e);
+                sourceExceptionMap.put(source, e);
             }
         }
         if (thereIsConnection(sourceExceptionMap))
@@ -83,7 +80,7 @@ class RepositoryImp implements Repository {
         dataBaseHelper.saveConcept(concept);
     }
 
-    private boolean thereIsConnection(Map<Source, Exception> sourceExceptionMap){
+    private boolean thereIsConnection(Map<Source, Exception> sourceExceptionMap) {
         boolean appConnected = true;
         if (!(sourceExceptionMap.isEmpty())) {
             appConnected = handler.thereIsConnection(sourceExceptionMap);
@@ -93,7 +90,7 @@ class RepositoryImp implements Repository {
         return appConnected;
     }
 
-    private List<FinalConceptResult> buildFinalList(String term, List<Concept> meaningsList, Map<Source,Exception> sourceExceptionMap){
+    private List<FinalConceptResult> buildFinalList(String term, List<Concept> meaningsList, Map<Source, Exception> sourceExceptionMap) {
         return resultsManager.buildList(term, meaningsList, sourceExceptionMap);
     }
 }

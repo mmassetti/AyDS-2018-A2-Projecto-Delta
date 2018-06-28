@@ -23,7 +23,7 @@ public class FormatCheckerImp implements FormatChecker {
         final String emptyString = "";
         final String spaceString = " ";
         boolean nullTerm = term == null;
-        boolean spaceTerm  = term.equals(spaceString);
+        boolean spaceTerm = term.equals(spaceString);
         boolean emptyTerm = term.equals(emptyString);
         if (nullTerm || emptyTerm || spaceTerm) {
             validTerm = false;
@@ -36,7 +36,7 @@ public class FormatCheckerImp implements FormatChecker {
         boolean wellFormedTerm = true;
         for (int i = 0; i < term.length() && wellFormedTerm; i++) {
             termLetter = term.charAt(i);
-            if (!validCharacter(term,i,termLetter)) {
+            if (!validCharacter(term, i, termLetter)) {
                 wellFormedTerm = false;
             }
         }
@@ -58,7 +58,7 @@ public class FormatCheckerImp implements FormatChecker {
         if (position != 0) {
             char previousChar = term.charAt(position - 1);
             if (Character.isSpaceChar(previousChar) && Character.isSpaceChar(actualChar))
-                return  true;
+                return true;
             else
                 return false;
         } else

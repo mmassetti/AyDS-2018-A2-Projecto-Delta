@@ -1,9 +1,5 @@
 package ayds.dictionary.delta.model.services;
 
-import android.util.Log;
-
-import java.io.IOException;
-import java.sql.Connection;
 
 import ayds.dictionary.delta.model.FormatChecker;
 import ayds.dictionary.delta.model.exceptions.BadFormatException;
@@ -14,9 +10,9 @@ import ayds.dictionary.delta.services.BigHugeLabsService;
 class BHLServiceAdapter extends ServiceDef {
     BigHugeLabsService bigHugeLabsService;
 
-    BHLServiceAdapter(BigHugeLabsService bigHugeLabsService, FormatChecker formatChecker){
+    BHLServiceAdapter(BigHugeLabsService bigHugeLabsService, FormatChecker formatChecker) {
         this.bigHugeLabsService = bigHugeLabsService;
-        this.formatChecker= formatChecker;
+        this.formatChecker = formatChecker;
     }
 
     @Override
@@ -26,11 +22,11 @@ class BHLServiceAdapter extends ServiceDef {
             String meaning = bigHugeLabsService.getMeaning(term);
             checkForBadMeaning(meaning);
             return meaning;
-        } catch (EmptyResultException e){
+        } catch (EmptyResultException e) {
             throw e;
-        } catch (BadFormatException e){
+        } catch (BadFormatException e) {
             throw e;
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new ConnectionErrorException();
         }
     }

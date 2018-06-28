@@ -2,8 +2,6 @@ package ayds.dictionary.delta.model.services;
 
 import com.example.yandex.service.TranslatorService;
 
-import java.io.IOException;
-
 import ayds.dictionary.delta.model.FormatChecker;
 import ayds.dictionary.delta.model.exceptions.BadFormatException;
 import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;

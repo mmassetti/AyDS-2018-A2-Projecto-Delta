@@ -1,6 +1,7 @@
 package ayds.dictionary.delta.model.database;
 
 import android.content.Context;
+
 import ayds.dictionary.delta.view.ViewModule;
 
 public class DataBaseModule {

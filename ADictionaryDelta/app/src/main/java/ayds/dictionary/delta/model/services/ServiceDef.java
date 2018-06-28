@@ -14,8 +14,8 @@ public abstract class ServiceDef {
         formatChecker.checkBadResult(meaning);
     }
 
-    public void checkTerm(String term) throws BadFormatException{
-        if(!(formatChecker.isValidTerm(term)))
+    public void checkTerm(String term) throws BadFormatException {
+        if (!(formatChecker.isValidTerm(term)))
             throw new BadFormatException();
     }
 }

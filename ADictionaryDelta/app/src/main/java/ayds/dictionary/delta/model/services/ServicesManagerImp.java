@@ -7,13 +7,14 @@ import ayds.dictionary.delta.model.Source;
 class ServicesManagerImp implements ServicesManager {
     ServicesFactory servicesFactory;
 
-    ServicesManagerImp(ServicesFactory servicesFactory){
+    ServicesManagerImp(ServicesFactory servicesFactory) {
         this.servicesFactory = servicesFactory;
     }
 
-    public Set<Source> getAllServices(){
+    public Set<Source> getAllServices() {
         return servicesFactory.getServices().keySet();
     }
+
     @Override
     public String getMeaning(String term, Source source) throws Exception {
         ServiceDef onSearchService = getSearchService(source);
@@ -21,7 +22,7 @@ class ServicesManagerImp implements ServicesManager {
         return searchResult;
     }
 
-    private ServiceDef getSearchService(Source source){
+    private ServiceDef getSearchService(Source source) {
         return servicesFactory.getServices().get(source);
     }
 

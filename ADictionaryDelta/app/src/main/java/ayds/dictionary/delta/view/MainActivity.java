@@ -15,7 +15,6 @@ import java.util.List;
 import ayds.dictionary.delta.R;
 import ayds.dictionary.delta.controller.ControllerModule;
 import ayds.dictionary.delta.controller.MeaningController;
-import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.ConceptModel;
 import ayds.dictionary.delta.model.FinalConceptResult;
 import ayds.dictionary.delta.model.ModelModule;
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
-                        //setTextOnResultPane("");
                         errorMessageHelper.showPopUpMessage(textToSet, MainActivity.this);
                         removeProgressBar();
                     }
@@ -154,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         return textConverterHelper.textToHTML(meaning, term);
     }
 
-    private String addBoldSource(String source){
+    private String addBoldSource(String source) {
         return textConverterHelper.textBold(source);
     }
 

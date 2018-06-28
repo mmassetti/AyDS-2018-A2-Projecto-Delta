@@ -9,17 +9,17 @@ import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 class ResultsManagerImp implements ResultsManager {
     private ExceptionHandler handler;
 
-    public ResultsManagerImp(ExceptionHandler handler){
+    public ResultsManagerImp(ExceptionHandler handler) {
         this.handler = handler;
     }
 
-    public List<FinalConceptResult> buildList(String term, List<Concept> meaningsList, Map<Source,Exception> sourceExceptionMap){
+    public List<FinalConceptResult> buildList(String term, List<Concept> meaningsList, Map<Source, Exception> sourceExceptionMap) {
         List<FinalConceptResult> finalList = new ArrayList<>();
-        for(Concept concept : meaningsList){
+        for (Concept concept : meaningsList) {
             FinalConceptResult finalConceptResult = createSourceTextView(concept.getTerm(), concept.getSource(), concept.getMeaning());
             finalList.add(finalConceptResult);
         }
-        for(Map.Entry<Source, Exception> entry : sourceExceptionMap.entrySet()){
+        for (Map.Entry<Source, Exception> entry : sourceExceptionMap.entrySet()) {
             String text = getExceptionMessage(entry.getValue());
             FinalConceptResult finalConceptResult = createSourceTextView(term, entry.getKey(), text);
             finalList.add(finalConceptResult);
@@ -27,7 +27,7 @@ class ResultsManagerImp implements ResultsManager {
         return finalList;
     }
 
-    private FinalConceptResult createSourceTextView(String term,Source source, String text){
+    private FinalConceptResult createSourceTextView(String term, Source source, String text) {
         FinalConceptResult finalConceptResult = new FinalConceptResult();
         finalConceptResult.setTerm(term);
         finalConceptResult.setSource(source);
@@ -35,7 +35,7 @@ class ResultsManagerImp implements ResultsManager {
         return finalConceptResult;
     }
 
-    private String getExceptionMessage(Exception e){
+    private String getExceptionMessage(Exception e) {
         return handler.getExceptionMessage(e);
     }
 

@@ -16,9 +16,9 @@ public class ServicesModule {
     private ServicesModule() {
         FormatChecker formatChecker = new FormatCheckerImp();
         servicesFactory = new ServicesFactoryImp(formatChecker,
-            BigHugeLabsModule.getInstance().getBigHugeLabsService(),
-            DataWikipediaModule.getInstance().getDataWikipedia(),
-            YandexModule.getInstance().getTranslatorService()
+                BigHugeLabsModule.getInstance().getBigHugeLabsService(),
+                DataWikipediaModule.getInstance().getDataWikipedia(),
+                YandexModule.getInstance().getTranslatorService()
         );
 
         servicesManager = new ServicesManagerImp(servicesFactory);
@@ -31,7 +31,7 @@ public class ServicesModule {
         return instance;
     }
 
-    public ServicesManager getServicesManager(){
+    public ServicesManager getServicesManager() {
         return servicesManager;
     }
 }

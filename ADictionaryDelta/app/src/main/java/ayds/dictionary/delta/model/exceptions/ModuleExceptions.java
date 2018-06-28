@@ -10,12 +10,12 @@ public class ModuleExceptions {
 
     public static ModuleExceptions getInstance() {
         if (instance == null) {
-            instance= new ModuleExceptions();
+            instance = new ModuleExceptions();
         }
-        return  instance;
+        return instance;
     }
 
-    public ExceptionHandler getHandler(){
+    public ExceptionHandler getHandler() {
         return handler;
     }
 }

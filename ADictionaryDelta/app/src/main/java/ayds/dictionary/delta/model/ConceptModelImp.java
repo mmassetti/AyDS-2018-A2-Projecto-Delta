@@ -1,7 +1,5 @@
 package ayds.dictionary.delta.model;
 
-import com.google.common.base.internal.Finalizer;
-
 import java.util.List;
 
 import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
@@ -29,7 +27,7 @@ class ConceptModelImp implements ConceptModel {
             @Override
             public void run() {
                 List<FinalConceptResult> meanings = searchTermOnRepository(term);
-                if(!meanings.isEmpty())
+                if (!meanings.isEmpty())
                     notifyListenerConceptModel(meanings);
             }
         }).start();
