@@ -43,7 +43,6 @@ class RepositoryImp implements Repository {
                     myConcept.setMeaning(meaning);
                 } else {
                     meaning = getMeaningFromService(myConcept);
-                    checkForBadMeaning(meaning);
                     myConcept.setMeaning(meaning);
                     saveConceptOnDB(myConcept);
                 }
@@ -70,10 +69,6 @@ class RepositoryImp implements Repository {
 
     private Set<Source> allServices() {
         return servicesManager.getAllServices();
-    }
-
-    private void checkForBadMeaning(String meaning) throws EmptyResultException {
-        formatChecker.checkBadResult(meaning);
     }
 
     private String getMeaningFromDB(Concept concept) {

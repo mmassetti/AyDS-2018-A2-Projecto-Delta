@@ -11,9 +11,8 @@ import ayds.dictionary.delta.model.exceptions.ConnectionErrorException;
 import ayds.dictionary.delta.model.exceptions.EmptyResultException;
 import ayds.dictionary.delta.services.BigHugeLabsService;
 
-class BHLServiceAdapter implements ServiceDef {
+class BHLServiceAdapter extends ServiceDef {
     BigHugeLabsService bigHugeLabsService;
-    FormatChecker formatChecker;
 
     BHLServiceAdapter(BigHugeLabsService bigHugeLabsService, FormatChecker formatChecker){
         this.bigHugeLabsService = bigHugeLabsService;
@@ -24,13 +23,15 @@ class BHLServiceAdapter implements ServiceDef {
     public String getMeaning(String term) throws ConnectionErrorException, BadFormatException, EmptyResultException {
         try {
             formatChecker.checkFormat(term);
-            return bigHugeLabsService.getMeaning(term);
-        } catch (IOException e){
-            throw new ConnectionErrorException();
+            String meaning = bigHugeLabsService.getMeaning(term);
+            checkForBadMeaning(meaning);
+            return meaning;
+        } catch (EmptyResultException e){
+            throw e;
         } catch (BadFormatException e){
-            throw new BadFormatException();
+            throw e;
         } catch (Exception e){
-            throw new EmptyResultException();
+            throw new ConnectionErrorException();
         }
     }
 }

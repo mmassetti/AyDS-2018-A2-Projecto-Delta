@@ -16,8 +16,8 @@ class ServicesFactoryImp implements ServicesFactory {
     ServicesFactoryImp(FormatChecker formatChecker,BigHugeLabsService bigHugeLabsService, DataWikipedia dataWikipedia, TranslatorService translatorService){
         mapSourceService = new TreeMap<>();
         ServiceDef BHLService = new BHLServiceAdapter(bigHugeLabsService,formatChecker);
-        ServiceDef WikiService = new WikiServiceAdapter(dataWikipedia);
-        ServiceDef YandexService = new YandexServiceAdapter(translatorService);
+        ServiceDef WikiService = new WikiServiceAdapter(dataWikipedia, formatChecker);
+        ServiceDef YandexService = new YandexServiceAdapter(translatorService, formatChecker);
         mapSourceService.put(Source.BIGHUGELABS,BHLService);
         mapSourceService.put(Source.WIKIPEDIA,WikiService);
         mapSourceService.put(Source.YANDEX,YandexService);

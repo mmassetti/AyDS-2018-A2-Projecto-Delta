@@ -1,6 +1,5 @@
 package ayds.dictionary.delta.model;
 
-import android.util.Log;
 
 import ayds.dictionary.delta.model.exceptions.BadFormatException;
 import ayds.dictionary.delta.model.exceptions.EmptyResultException;
@@ -15,7 +14,6 @@ public class FormatCheckerImp implements FormatChecker {
     }
 
     public void checkFormat(String term) throws BadFormatException {
-        Log.i("msg","El termino es "+term);
         if (!isWellFormedTermFormat(term) || !isValidTerm(term))
             throw new BadFormatException();
     }
@@ -29,7 +27,6 @@ public class FormatCheckerImp implements FormatChecker {
                 wellFormedTerm = false;
             }
         }
-        Log.i("valor1","El valor que devuelve isWellFormedTerm es "+wellFormedTerm);
         return wellFormedTerm;
     }
 
@@ -65,7 +62,6 @@ public class FormatCheckerImp implements FormatChecker {
         if (nullTerm || emptyTerm || spaceTerm) {
             validTerm = false;
         }
-        Log.i("valor2","El valor que devuelve isValidTerm es "+validTerm);
         return validTerm;
     }
 }
