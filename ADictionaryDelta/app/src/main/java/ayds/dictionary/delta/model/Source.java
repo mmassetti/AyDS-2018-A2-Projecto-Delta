@@ -1,5 +1,7 @@
 package ayds.dictionary.delta.model;
 
 public enum Source {
-    BIGHUGELABS
+    BIGHUGELABS,
+    YANDEX,
+    WIKIPEDIA
 }

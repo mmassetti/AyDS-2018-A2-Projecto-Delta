@@ -8,4 +8,8 @@ class TextConverterHelperImp implements TextConverterHelper {
         builder.append(textWithBold);
         return builder.toString();
     }
+
+    public String textBold(String text) {
+        return "<b>" + text + "</b>";
+    }
 }

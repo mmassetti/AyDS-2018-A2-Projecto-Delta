@@ -1,111 +1,111 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\4650152fb18ec7ff0579dec860e8efac\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5b002353ec4bc2ed78f4b3467221f50e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6f0fd6246c221fd34c9a02b2e870c78f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\89976bac2d968e7841a621098affdae8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\cfabcdd87ec28772887ff7f595779a0d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.0.aar\e943d5c2e853aad95d4052eb9159aa07\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence:db:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\db-1.1.0.aar\aed522a1dae377862cf52d08ee2a8daf\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\1cf9733248bbea6b687150aed79ffd1a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\db4608853c7ede3de67f2e2a3f515a8a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\4614f8d80b572bf3843a822c1ac0dbe4\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\20d9ed670e4ede258e195f1f68606df6\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f099c157c78890a68c4014162899eb07\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\56013fb2962029d416d66c80bfd74fc2\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e06291156a6ce2a37400762e077c6564\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\895829ac7731f8fd2c2968553a189691\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\fdbcceebec766298fd83ea4664e90d52\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\fc111e945cc70201698353802b64e003\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\48a02ba08c99405e9973afa575d560bf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\65ba532fa287d92ca8c2bfd9d0e454b8\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.0.aar\b82671a62ab6187c1d55d5a019ff74c7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\db-1.1.0.aar\78f8a2aa96225b3f747b8495684eb32a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\ccc3edd65ed15e3bde4066f6b64c6dd6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\ffd67ae5b17b4c6605c00ccd4ac06747\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\69a2e65d2ea09a65ad1db37df9c74147\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4722cb3c53464ec87ee958a32bd21987\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\bf8895344377734e455f5917660496fa\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0af32e69707dfc0ef64921139d5e86a2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\72a63f744ececb17cc6e2e06c945699f\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:11-42
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:11-42
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:3:3-61
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:3:3-61
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:3-65
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:3-65
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:20-62
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:5:20-62
 application
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:7:3-21:17
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:7:3-21:17
 	android:supportsRtl
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:12:5-31
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:12:5-31
 	android:label
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:10:5-46
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:10:5-46
 	android:roundIcon
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:11:5-50
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:11:5-50
 	android:icon
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:9:5-39
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:9:5-39
 	android:allowBackup
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:8:5-31
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:8:5-31
 	android:theme
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:13:5-36
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:13:5-36
 activity#ayds.dictionary.delta.view.MainActivity
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:5-20:16
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:5-20:16
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:15-48
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:14:15-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:15:7-19:23
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:15:7-19:23
 action#android.intent.action.MAIN
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:9-61
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:9-61
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:17-58
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:16:17-58
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:9-69
+ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:9-69
 	android:name
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:19-66
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml:18:19-66
 uses-sdk
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\4650152fb18ec7ff0579dec860e8efac\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\4650152fb18ec7ff0579dec860e8efac\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5b002353ec4bc2ed78f4b3467221f50e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5b002353ec4bc2ed78f4b3467221f50e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6f0fd6246c221fd34c9a02b2e870c78f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6f0fd6246c221fd34c9a02b2e870c78f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\89976bac2d968e7841a621098affdae8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\89976bac2d968e7841a621098affdae8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\cfabcdd87ec28772887ff7f595779a0d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\cfabcdd87ec28772887ff7f595779a0d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.0.aar\e943d5c2e853aad95d4052eb9159aa07\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.0.aar\e943d5c2e853aad95d4052eb9159aa07\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\db-1.1.0.aar\aed522a1dae377862cf52d08ee2a8daf\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\db-1.1.0.aar\aed522a1dae377862cf52d08ee2a8daf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\1cf9733248bbea6b687150aed79ffd1a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\1cf9733248bbea6b687150aed79ffd1a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\db4608853c7ede3de67f2e2a3f515a8a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\db4608853c7ede3de67f2e2a3f515a8a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\4614f8d80b572bf3843a822c1ac0dbe4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\4614f8d80b572bf3843a822c1ac0dbe4\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\20d9ed670e4ede258e195f1f68606df6\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\20d9ed670e4ede258e195f1f68606df6\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f099c157c78890a68c4014162899eb07\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f099c157c78890a68c4014162899eb07\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\56013fb2962029d416d66c80bfd74fc2\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\56013fb2962029d416d66c80bfd74fc2\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e06291156a6ce2a37400762e077c6564\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Juanfri\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e06291156a6ce2a37400762e077c6564\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\895829ac7731f8fd2c2968553a189691\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\895829ac7731f8fd2c2968553a189691\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\fdbcceebec766298fd83ea4664e90d52\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\fdbcceebec766298fd83ea4664e90d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\fc111e945cc70201698353802b64e003\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\fc111e945cc70201698353802b64e003\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\48a02ba08c99405e9973afa575d560bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\48a02ba08c99405e9973afa575d560bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\65ba532fa287d92ca8c2bfd9d0e454b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\65ba532fa287d92ca8c2bfd9d0e454b8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.0.aar\b82671a62ab6187c1d55d5a019ff74c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\db-framework-1.1.0.aar\b82671a62ab6187c1d55d5a019ff74c7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\db-1.1.0.aar\78f8a2aa96225b3f747b8495684eb32a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\db-1.1.0.aar\78f8a2aa96225b3f747b8495684eb32a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\ccc3edd65ed15e3bde4066f6b64c6dd6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\ccc3edd65ed15e3bde4066f6b64c6dd6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\ffd67ae5b17b4c6605c00ccd4ac06747\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\ffd67ae5b17b4c6605c00ccd4ac06747\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\69a2e65d2ea09a65ad1db37df9c74147\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\69a2e65d2ea09a65ad1db37df9c74147\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4722cb3c53464ec87ee958a32bd21987\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\4722cb3c53464ec87ee958a32bd21987\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\bf8895344377734e455f5917660496fa\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\bf8895344377734e455f5917660496fa\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0af32e69707dfc0ef64921139d5e86a2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0af32e69707dfc0ef64921139d5e86a2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\72a63f744ececb17cc6e2e06c945699f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\mmassetti\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\72a63f744ececb17cc6e2e06c945699f\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Juanfri\Desktop\A2-Proyecto-Delta-Entrega3\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mmassetti\Desktop\VersionesProyecto\Entrega4-V1\ADictionaryDelta\app\src\main\AndroidManifest.xml

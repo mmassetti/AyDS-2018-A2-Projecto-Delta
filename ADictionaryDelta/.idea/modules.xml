@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ADictionaryDelta.iml" filepath="$PROJECT_DIR$/ADictionaryDelta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WikipediaLib/WikipediaLib.iml" filepath="$PROJECT_DIR$/WikipediaLib/WikipediaLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bhlLIB/bhlLIB.iml" filepath="$PROJECT_DIR$/bhlLIB/bhlLIB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yandexservice/yandexservice.iml" filepath="$PROJECT_DIR$/yandexservice/yandexservice.iml" />
     </modules>
   </component>
 </project>

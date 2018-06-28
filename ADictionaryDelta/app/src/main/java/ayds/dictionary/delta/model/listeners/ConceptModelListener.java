@@ -1,7 +1,9 @@
 package ayds.dictionary.delta.model.listeners;
 
-import ayds.dictionary.delta.model.Concept;
+import java.util.List;
+
+import ayds.dictionary.delta.model.FinalConceptResult;
 
 public interface ConceptModelListener {
-    void didUpdateTerm(Concept concept);
+    void didUpdateTerm(List<FinalConceptResult> concept);
 }

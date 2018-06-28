@@ -22,5 +22,7 @@ public class ViewModule {
     public void setContext(Context context) {
         this.context = context;
     }
+
+
 }
 

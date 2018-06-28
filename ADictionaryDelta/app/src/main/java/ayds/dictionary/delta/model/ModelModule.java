@@ -1,21 +1,23 @@
 package ayds.dictionary.delta.model;
 
 import ayds.dictionary.delta.model.database.DataBaseHelper;
-import ayds.dictionary.delta.model.database.ModuleDataBase;
+import ayds.dictionary.delta.model.database.DataBaseModule;
 import ayds.dictionary.delta.model.exceptions.ExceptionHandler;
 import ayds.dictionary.delta.model.exceptions.ModuleExceptions;
-import services.Service;
-import services.ServiceModule;
+import ayds.dictionary.delta.model.services.ServicesManager;
+import ayds.dictionary.delta.model.services.ServicesModule;
 
 public class ModelModule {
     private static ModelModule instance;
     private ConceptModel conceptModel;
 
     private ModelModule() {
-        DataBaseHelper dataBaseHelper = ModuleDataBase.getInstance().getDataBaseHelper();
-        Service service = getService();
-        ExceptionHandler handler = ModuleExceptions.getInstance().getHandler();
-        Repository repository = new RepositoryImp(service, dataBaseHelper, handler);
+        DataBaseHelper dataBaseHelper = getDBHelper();
+        ServicesManager servicesManager = getServicesManager();
+        ExceptionHandler handler = getExceptionHandler();
+        FormatChecker formatChecker = new FormatCheckerImp();
+        ResultsManager resultsManager = new ResultsManagerImp(handler);
+        Repository repository = new RepositoryImp(servicesManager, dataBaseHelper, handler, formatChecker, resultsManager);
         conceptModel = new ConceptModelImp(repository);
     }
 
@@ -29,7 +31,17 @@ public class ModelModule {
         return conceptModel;
     }
 
-    private Service getService(){
-        return ServiceModule.getInstance().getService();
+    private DataBaseHelper getDBHelper() {
+        return DataBaseModule.getInstance().getDataBaseHelper();
     }
+
+    public ExceptionHandler getExceptionHandler() {
+        return ModuleExceptions.getInstance().getHandler();
+    }
+
+    private ServicesManager getServicesManager() {
+        return ServicesModule.getInstance().getServicesManager();
+    }
+
+
 }

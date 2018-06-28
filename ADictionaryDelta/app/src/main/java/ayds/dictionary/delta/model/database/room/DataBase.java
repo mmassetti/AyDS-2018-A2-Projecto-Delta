@@ -3,7 +3,6 @@ package ayds.dictionary.delta.model.database.room;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
-import java.util.List;
 
 public class DataBase {
     private static ConceptDataBase database;
@@ -12,28 +11,25 @@ public class DataBase {
         database = Room.databaseBuilder(context, ConceptDataBase.class, "dictionary.db").build();
     }
 
-    public static void saveTerm(String term, String meaning) {
+    public static void saveTerm(String term, String meaning, int source) {
         ConceptDB concept = new ConceptDB();
         concept.setTerm(term);
         concept.setMeaning(meaning);
-        concept.setSource(1);
+        concept.setSource(source);
         insertConcept(concept);
     }
 
-    public static String getMeaning(String term) {
-        ConceptDB concept = findConceptByName(term);
+    public static String getMeaning(String term, int source) {
+        ConceptDB concept = findConceptByNameAndSource(term, source);
         if (concept != null) {
             return concept.getMeaning();
         }
         return null;
     }
 
-    private static List<ConceptDB> getConcepts() {
-        return database.termDao().getAll();
-    }
 
-    private static ConceptDB findConceptByName(String term) {
-        return database.termDao().findByName(term);
+    private static ConceptDB findConceptByNameAndSource(String term, int source) {
+        return database.termDao().findByNameAndSource(term, source);
     }
 
     private static void insertConcept(ConceptDB concept) {

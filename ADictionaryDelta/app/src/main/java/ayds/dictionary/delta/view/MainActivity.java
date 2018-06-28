@@ -10,11 +10,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.List;
+
 import ayds.dictionary.delta.R;
 import ayds.dictionary.delta.controller.ControllerModule;
 import ayds.dictionary.delta.controller.MeaningController;
-import ayds.dictionary.delta.model.Concept;
 import ayds.dictionary.delta.model.ConceptModel;
+import ayds.dictionary.delta.model.FinalConceptResult;
 import ayds.dictionary.delta.model.ModelModule;
 import ayds.dictionary.delta.model.listeners.ConceptModelListener;
 import ayds.dictionary.delta.model.listeners.ErrorListener;
@@ -23,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText wordField;
     private Button goButton;
     private ProgressBar progressBar;
-    private TextView resultPane, sourceLabel;
+    private TextView resultPane;
     private MeaningController meaningController;
     private ConceptModel conceptModel;
-    private TextConverterHelper textConverterHelper = new TextConverterHelperImp();
-    private ErrorMessageHelper errorMessageHelper = new ErrorMessageHelperImp();
+    private TextConverterHelper textConverterHelper;
+    private ErrorMessageHelper errorMessageHelper;
     private Handler progressBarHandler;
 
     @Override
@@ -49,24 +51,21 @@ public class MainActivity extends AppCompatActivity {
         });
         conceptModel.addConceptListener(new ConceptModelListener() {
             @Override
-            public void didUpdateTerm(final Concept concept) {
-                final String textToSet = transformMeaningAndTerm(concept.getMeaning(), concept.getTerm());
+            public void didUpdateTerm(final List<FinalConceptResult> meanings) {
+                final String textToSet = buildString(meanings);
                 resultPane.post(new Runnable() {
                     public void run() {
                         setTextOnResultPane(textToSet);
-                        String source = concept.getSource().toString();
-                        sourceLabel.setText(getString(R.string.source, source));
                     }
                 });
             }
         });
         conceptModel.addErrorListener(new ErrorListener() {
             @Override
-            public void didErrorOccur(String message) {
+            public void didErrorOccur(final String message) {
                 final String textToSet = message;
                 resultPane.post(new Runnable() {
                     public void run() {
-                        setTextOnResultPane("");
                         errorMessageHelper.showPopUpMessage(textToSet, MainActivity.this);
                         removeProgressBar();
                     }
@@ -94,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         resultPane = findViewById(R.id.resultPane);
         progressBarHandler = new Handler();
-        sourceLabel = findViewById(R.id.sourceLabel);
+        textConverterHelper = new TextConverterHelperImp();
+        errorMessageHelper = new ErrorMessageHelperImp();
     }
 
     private void setApplicationContext() {
@@ -114,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setTextOnResultPane(String textToSet) {
-        resultPane.setText(Html.fromHtml(textToSet));
+        String finalText = textToSet.replaceAll("(\r\n|\n)", "<br />"); //Keep new lines
+        resultPane.setText(Html.fromHtml(finalText));
         removeProgressBar();
     }
 
@@ -131,7 +132,29 @@ public class MainActivity extends AppCompatActivity {
         meaningController.searchMeaning(term);
     }
 
-    private String transformMeaningAndTerm(String meaning, String term) {
+
+    private String buildString(List<FinalConceptResult> meanings) {
+        final String simpleSpace = "" + "\n";
+        final String doubleSpace = "" + simpleSpace + simpleSpace;
+        String finalString = "";
+        String meaningText;
+        for (FinalConceptResult concept : meanings) {
+            String stringSource = concept.getSource().toString();
+            meaningText = addBoldSource(stringSource) + simpleSpace;
+            meaningText += transformResultAndTerm(concept.getSourceResult(), concept.getTerm()) + doubleSpace;
+            finalString += meaningText;
+        }
+        return finalString;
+    }
+
+
+    private String transformResultAndTerm(String meaning, String term) {
         return textConverterHelper.textToHTML(meaning, term);
     }
+
+    private String addBoldSource(String source) {
+        return textConverterHelper.textBold(source);
+    }
+
+
 }
